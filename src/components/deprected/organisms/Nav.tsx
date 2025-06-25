@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Logo from "../atoms/Logo";
 import { cleanLink, cn } from "@/lib/utils";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 const menuItems = ["About us", "Manifest", "Team", "KPIs"];
 
