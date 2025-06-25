@@ -1,21 +1,7 @@
-import SmootherContainer from "@/components/atoms/SmootherContainer";
-import Agenda from "@/components/molecules/Agenda";
-import BackgroundVideo from "@/components/molecules/BackgroundVideo";
-import Contact from "@/components/molecules/Contact";
-import Hero from "@/components/molecules/Hero";
-import Manifest from "@/components/molecules/Manifest";
-import Overview from "@/components/molecules/Overview";
-import Purpose from "@/components/molecules/Purpose";
-import ShaderBackground from "@/components/molecules/ShaderBackground";
-import StatsSection from "@/components/molecules/StatsSection";
-import Team from "@/components/molecules/Team";
-import Footer from "@/components/organisms/Footer";
-import Nav from "@/components/organisms/Nav";
-
 export default function Home() {
   return (
     <>
-      <Nav />
+      {/* <Nav />
 
       <ShaderBackground />
 
@@ -47,7 +33,7 @@ export default function Home() {
 
           <Footer />
         </div>
-      </SmootherContainer>
+      </SmootherContainer> */}
     </>
   );
 }
