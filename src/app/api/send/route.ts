@@ -2,7 +2,7 @@
 import { Resend } from "resend";
 
 import { NextResponse } from "next/server";
-import NikeReceiptEmail from "@/components/email/EmailTemplate";
+import NikeReceiptEmail from "@/components/deprected/email/EmailTemplate";
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
 
