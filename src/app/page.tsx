@@ -1,18 +1,20 @@
 import Nav from "@/components/organisms/Nav";
+import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   return (
     <>
       <Nav />
 
-      <iframe
-        src="https://my.spline.design/untitled-akpiriQZMtQaAbxZNcdAmrNt/"
-        width="100%"
-        height="100%"
-        className="w-full h-screen"
-      ></iframe>
+      <Spline scene="https://prod.spline.design/vmkVRuLus8-blXQe/scene.splinecode" />
 
-      <div className="flex flex-col min-h-[200vh] bg-orange-600 w-full"></div>
+      <section className="flex flex-col min-h-[200vh] bg-white text-black w-full py-24 px-4">
+        <p>Width the help of</p>
+        <p>Width the help of</p>
+        <p>Width the help of</p>
+        <p>Width the help of</p>
+        <p>Width the help of</p>
+      </section>
       {/* 
       <ShaderBackground />
 

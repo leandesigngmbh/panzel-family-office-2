@@ -27,6 +27,10 @@ const suisseIntl = localFont({
   ],
 });
 
+const ot2049 = localFont({
+  src: "../../public/fonts/OT2049-Regular.woff2",
+});
+
 export const metadata: Metadata = {
   title: "Panzel Family Office",
   description: "Create value for generations to come",
@@ -40,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${suisseIntl.className} font-normal subpixel-antialiased tracking-tight`}
+        className={` ${suisseIntl.className} font-normal subpixel-antialiased tracking-tight`}
       >
         {children}
       </body>
