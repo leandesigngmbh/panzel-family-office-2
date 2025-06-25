@@ -1,6 +1,6 @@
 "use client";
 
-import CountUp from "@/components/atoms/CountUp";
+import CountUp from "@/components/deprected/atoms/CountUp";
 import { cn } from "@/lib/utils";
 
 type SubItem = {

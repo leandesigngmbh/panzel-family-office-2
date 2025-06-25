@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Logo from "../atoms/Logo";
+import { Button } from "@/components/ui/button";
 import { cleanLink, cn } from "@/lib/utils";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import Logo from "@/components/deprected/atoms/Logo";
 
 const menuItems = ["About us", "Manifest", "Team", "KPIs"];
 
