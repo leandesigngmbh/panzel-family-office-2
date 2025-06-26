@@ -17,7 +17,10 @@ export default function Home() {
           <section className="py-24 px-4">
             <div className="flex flex-col items-end">
               <div>
-                <h2 className="whitespace-nowrap uppercase text-base">About</h2>
+                <h2 className="whitespace-nowrap uppercase text-base text-red">
+                  About
+                </h2>
+
                 <Text
                   text="Backed by three generations of family investors and over a century of
         real family office experience, Panzel Family Office is your trusted
@@ -28,7 +31,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="relative leading-none grid grid-cols-2 text-[8vw] py-12 font-secondary uppercase px-4 max-w-4/5">
+          <div className="relative leading-none grid grid-cols-2 text-[8vw] py-12 font-secondary uppercase px-4">
             <h2 className="text-left">
               Build on
               <br />
@@ -44,7 +47,11 @@ export default function Home() {
           <Manifest />
 
           <section className="py-24 px-4">
-            <div className="flex justify-start">
+            <div className="flex justify-start flex-col">
+              <h2 className="whitespace-nowrap uppercase text-base text-red">
+                Services
+              </h2>
+
               <Text
                 text="Asset Management,
 Wealth Management,

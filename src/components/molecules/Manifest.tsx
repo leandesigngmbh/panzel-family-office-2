@@ -52,7 +52,7 @@ const Manifest = () => {
       className="text-4xl flex relative w-full"
     >
       {/* LEFT SCROLLING INDEXES */}
-      <div className="flex flex-col w-full items-center">
+      <div className="flex flex-col w-full">
         <div className="h-[30vh]"></div>
         {manifestItems.map((_, i) => (
           <div
@@ -74,7 +74,9 @@ const Manifest = () => {
       {/* RIGHT PINNED MANIFEST TEXTS */}
       <div className="manifest-right w-full h-screen items-end flex justify-end flex-col p-4">
         <div>
-          <h2 className="whitespace-nowrap uppercase text-base">Manifest</h2>
+          <h2 className="whitespace-nowrap uppercase text-base text-red">
+            Manifest
+          </h2>
 
           <div className="max-w-[20ch] text-pretty indent-24">
             {manifestItems.map((item, i) => (

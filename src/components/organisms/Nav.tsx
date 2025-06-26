@@ -33,7 +33,7 @@ const Nav = () => {
     <nav
       className={cn(
         "fixed z-50 text-white top-0 inset-x-0 p-4 grid grid-cols-3 w-full uppercase items-center transition duration-300",
-        scrolled ? "bg-white text-[#FF2700]" : "bg-transparent text-white",
+        scrolled ? "bg-white text-red" : "bg-transparent text-white",
         showNav ? "translate-y-0" : "-translate-y-full"
       )}
     >
