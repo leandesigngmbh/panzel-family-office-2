@@ -1,4 +1,4 @@
-import Logo from "@/components/deprected/atoms/Logo";
+import Logo from "@/components/atoms/Logo";
 
 const Footer = () => {
   return (

@@ -8,15 +8,10 @@ import { cn } from "@/lib/utils";
 
 const manifestItems = [
   "Make your vision explode. ",
-
   "Flip the game, and never settle. ",
-
   "The future’s your playground—take it by force. ",
-
   "Real change? It starts inside. ",
-
   "Think savage. Move fearless. ",
-
   "Stay hungry. Stay raw. ",
 ];
 
@@ -46,9 +41,7 @@ const Manifest = () => {
       start: "top top",
       end: "bottom bottom",
       pin: ".manifest-right",
-      // pinSpacing: true,
       scrub: true,
-      // markers: true,
     });
   }, []);
 
@@ -56,18 +49,16 @@ const Manifest = () => {
     <div
       id="manifest"
       ref={container}
-      className="bg-black text-white text-4xl flex relative w-full"
+      className="text-4xl flex relative w-full"
     >
-      <h2 className="text-sm whitespace-nowrap p-8">● Our Manifest</h2>
-
       {/* LEFT SCROLLING INDEXES */}
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full items-center">
         <div className="h-[30vh]"></div>
         {manifestItems.map((_, i) => (
           <div
             key={i}
             className={cn(
-              "manifest-index relative text-[16vw] font-semibold leading-none transition duration-300",
+              "manifest-index relative text-[16vw] font-secondary leading-none transition duration-300",
               activeIndex === i
                 ? "opacity-100 translate-x-16"
                 : "opacity-20 translate-x-0"
@@ -81,19 +72,23 @@ const Manifest = () => {
       </div>
 
       {/* RIGHT PINNED MANIFEST TEXTS */}
-      <div className="manifest-right w-full h-screen items-center flex justify-start py-8 pr-8">
-        <div className="max-w-[20ch] text-pretty">
-          {manifestItems.map((item, i) => (
-            <span
-              key={i}
-              className={cn(
-                "transition-opacity duration-300",
-                activeIndex === i ? "opacity-100" : "opacity-20"
-              )}
-            >
-              {item}
-            </span>
-          ))}
+      <div className="manifest-right w-full h-screen items-end flex justify-end flex-col p-4">
+        <div>
+          <h2 className="whitespace-nowrap uppercase text-base">Manifest</h2>
+
+          <div className="max-w-[20ch] text-pretty indent-24">
+            {manifestItems.map((item, i) => (
+              <span
+                key={i}
+                className={cn(
+                  "transition-opacity duration-300",
+                  activeIndex === i ? "opacity-100" : "opacity-20"
+                )}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

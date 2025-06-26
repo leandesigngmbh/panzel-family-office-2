@@ -1,9 +1,9 @@
-"use client";
-
 import Text from "@/components/atoms/Text";
-import SmootherContainer from "@/components/deprected/atoms/SmootherContainer";
+import SmootherContainer from "@/components/atoms/SmootherContainer";
 import Hero from "@/components/molecules/Hero";
+import Manifest from "@/components/molecules/Manifest";
 import Nav from "@/components/organisms/Nav";
+import Footer from "@/components/organisms/Footer";
 
 export default function Home() {
   return (
@@ -12,56 +12,54 @@ export default function Home() {
 
       <SmootherContainer>
         <Hero />
+
         <main className="bg-white relative">
           <section className="py-24 px-4">
-            <div className="flex justify-end">
-              <Text
-                text="Backed by three generations of family investors and over a century of
+            <div className="flex flex-col items-end">
+              <div>
+                <h2 className="whitespace-nowrap uppercase text-base">About</h2>
+                <Text
+                  text="Backed by three generations of family investors and over a century of
         real family office experience, Panzel Family Office is your trusted
         partner in asset management. We offer tailored expertise to protect your
         wealth and ensure smooth, future-ready succession across generations."
+                />
+              </div>
+            </div>
+          </section>
+
+          <div className="relative leading-none grid grid-cols-2 text-[8vw] py-12 font-secondary uppercase px-4 max-w-4/5">
+            <h2 className="text-left">
+              Build on
+              <br />
+              Legacy.
+            </h2>
+
+            <div></div>
+            <div></div>
+
+            <h2 className="text-right -mt-[1em]">Driven by Innovation.</h2>
+          </div>
+
+          <Manifest />
+
+          <section className="py-24 px-4">
+            <div className="flex justify-start">
+              <Text
+                text="Asset Management,
+Wealth Management,
+Startup Platform for NextGen,
+Hiring and Staffing Services,
+Relocation Services,
+Family Office Services,
+Boarding Services."
               />
             </div>
           </section>
-
-          <section className="flex font-secondary text-[8vw] flex-col uppercase bg-white text-black w-full py-24 px-4">
-            <p>Build on Legacy</p>
-            <p>Driven by Innovation</p>
-          </section>
         </main>
+
+        <Footer />
       </SmootherContainer>
-      {/* 
-      <ShaderBackground />
-
-      <SmootherContainer>
-        <div className="relative">
-          <main className="flex flex-col items-center min-h-screen">
-            <Hero />
-
-            <Overview />
-
-            <div className="h-[50vh]"></div>
-
-            <Agenda />
-
-            <Purpose />
-
-            <div data-speed="0.7" className="relative h-[100vh] -z-10 w-full">
-              <BackgroundVideo src={"/assets/bg-video.mp4"} />
-            </div>
-
-            <Manifest />
-
-            <Team />
-
-            <StatsSection />
-
-            <Contact />
-          </main>
-
-          <Footer />
-        </div>
-      </SmootherContainer> */}
     </>
   );
 }
