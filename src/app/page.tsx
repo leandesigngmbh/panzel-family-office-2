@@ -35,13 +35,16 @@ export default function Home() {
             <h2 className="text-left">
               Build on
               <br />
-              Legacy.
+              Legacy
             </h2>
 
             <div></div>
             <div></div>
 
-            <h2 className="text-right -mt-[1em]">Driven by Innovation.</h2>
+            <h2 className="text-right -mt-[1em]">
+              Driven by
+              <br /> Innovation
+            </h2>
           </div>
 
           <Manifest />
