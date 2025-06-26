@@ -128,3 +128,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.bg-hatch-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #000 0,
+    #000 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  background-color: white;
+  background-size: 6px 6px;
+}
+
+.bg-hatch-cross {
+  background-image: 
+    repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(-45deg, #000 0, #000 1px, transparent 1px, transparent 6px);
+  background-color: white;
+  background-size: 6px 6px;
+}
+
+.bg-hatch-dots {
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 6px 6px;
+  background-color: white;
+}

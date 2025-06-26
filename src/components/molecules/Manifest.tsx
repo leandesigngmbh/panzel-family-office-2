@@ -58,7 +58,7 @@ const Manifest = () => {
           <div
             key={i}
             className={cn(
-              "manifest-index relative text-[16vw] font-secondary leading-none transition duration-300",
+              "manifest-index relative text-[16vw] leading-none transition duration-300",
               activeIndex === i
                 ? "opacity-100 translate-x-16"
                 : "opacity-20 translate-x-0"

@@ -4,6 +4,7 @@ import Hero from "@/components/molecules/Hero";
 import Manifest from "@/components/molecules/Manifest";
 import Nav from "@/components/organisms/Nav";
 import Footer from "@/components/organisms/Footer";
+import StatsSection from "@/components/molecules/StatsSection";
 
 export default function Home() {
   return (
@@ -66,6 +67,8 @@ Boarding Services."
               />
             </div>
           </section>
+
+          <StatsSection />
         </main>
 
         <Footer />
