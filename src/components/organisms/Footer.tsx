@@ -2,7 +2,7 @@ import Logo from "@/components/atoms/Logo";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-100 bg-red text-white text-xs p-8 min-h-64 flex flex-col justify-between">
+    <footer className="w-full bg-gray-100 bg-red text-white text-xs p-4 min-h-64 flex flex-col justify-between">
       <div className="flex justify-between">
         <Logo />
 
