@@ -1,3 +1,6 @@
+"use client";
+
+import Text from "@/components/atoms/Text";
 import Nav from "@/components/organisms/Nav";
 import Spline from "@splinetool/react-spline";
 
@@ -6,9 +9,23 @@ export default function Home() {
     <>
       <Nav />
 
-      <Spline scene="https://prod.spline.design/vmkVRuLus8-blXQe/scene.splinecode" />
+      <Spline
+        style={{ height: "100vh" }}
+        scene="https://prod.spline.design/vmkVRuLus8-blXQe/scene.splinecode"
+      />
 
-      <section className="flex flex-col min-h-[200vh] bg-white text-black w-full py-24 px-4">
+      <section className="py-24 px-4">
+        <div className="flex justify-end">
+          <Text
+            text="Backed by three generations of family investors and over a century of
+        real family office experience, Panzel Family Office is your trusted
+        partner in asset management. We offer tailored expertise to protect your
+        wealth and ensure smooth, future-ready succession across generations."
+          />
+        </div>
+      </section>
+
+      <section className="flex font-secondary text-[8vw] flex-col min-h-[200vh] bg-white text-black w-full py-24 px-4">
         <p>Width the help of</p>
         <p>Width the help of</p>
         <p>Width the help of</p>

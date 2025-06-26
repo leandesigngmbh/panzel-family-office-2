@@ -25,10 +25,12 @@ const suisseIntl = localFont({
       style: "normal",
     },
   ],
+  variable: "--font-primary",
 });
 
 const ot2049 = localFont({
   src: "../../public/fonts/OT2049-Regular.woff2",
+  variable: "--font-secondary",
 });
 
 export const metadata: Metadata = {
@@ -44,9 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${suisseIntl.className} font-normal subpixel-antialiased tracking-tight`}
+        className={`${suisseIntl.variable} ${ot2049.variable} font-normal font-primary subpixel-antialiased tracking-tight`}
       >
-        {children}
+        <div>{children}</div>
       </body>
     </html>
   );
