@@ -77,26 +77,15 @@ const statsItems: StatsItemProps[] = [
   },
 ];
 
-// 1. mainItem = cross
-// 2. subItems = [dots, diagonal-one, diagonal-two]
-const HATCH_PATTERN_LIST = [
-  "bg-hatch-dots",
-  "bg-hatch-diagonal",
-  "bg-hatch-cross",
-  "bg-hatch-lines",
-];
-
 const RemainingStatsItems = ({ items }: RemainingStatsItemProps) => {
-  const subItemPatterns = items.map((_, i) => HATCH_PATTERN_LIST[i + 1] ?? "");
-
   return (
-    <div className="w-full flex text-4xl">
+    <div className="w-full flex text-4xl gap-px bg-black">
       {items.map((item, i) => (
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end p-3",
-            subItemPatterns[i]
+            "flex flex-col items-start justify-end p-3 bg-white"
+            // subItemPatterns[i]
           )}
           style={{ width: `${item.to}%` }}
         >
@@ -118,27 +107,25 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
   const mainItem = subItems[0];
   const otherItems = subItems.slice(1);
 
-  const mainPattern = HATCH_PATTERN_LIST[0]; // "bg-hatch-cross"
-
   return (
-    <li className="flex w-full bg-white group hover:bg-gray-200 transition-colors duration-300">
-      <div className="flex flex-col p-4 min-h-52 gap-2 max-w-md w-full">
+    <li className="flex w-full bg-black gap-px group">
+      <div className="flex flex-col p-4 min-h-52 gap-2 max-w-md w-full bg-white">
         <h2 className="text-4xl">{title}</h2>
         <p>{subtitle}</p>
       </div>
 
-      <div className={cn("flex-1 flex flex-col justify-end")}>
+      <div className={cn("flex-1 flex flex-col justify-end bg-black gap-px")}>
         {mainItem && (
           <div
             className={cn(
-              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2",
-              mainPattern
+              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 bg-white"
+              //   mainPattern
             )}
           >
             {mainItem.prefix && (
               <span className="text-base">{mainItem.prefix}</span>
             )}
-            <div className="bg-white">
+            <div className="">
               <CountUp from={+mainItem.from} to={+mainItem.to} />
               {mainItem.suffix && <span>{mainItem.suffix}</span>}
             </div>
@@ -158,7 +145,7 @@ const StatsSection = () => {
         Key Performance Indicators
       </h2>
 
-      <div className="w-full flex flex-col">
+      <div className="w-full flex flex-col bg-black border-black border-t gap-px">
         {statsItems.map((item, i) => (
           <StatsItem {...item} key={i} />
         ))}

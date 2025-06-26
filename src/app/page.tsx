@@ -5,12 +5,14 @@ import Manifest from "@/components/molecules/Manifest";
 import Nav from "@/components/organisms/Nav";
 import Footer from "@/components/organisms/Footer";
 import StatsSection from "@/components/molecules/StatsSection";
+import NavOnPage from "@/components/organisms/NavOnPage";
 
 export default function Home() {
   return (
     <>
       <Nav />
 
+      <NavOnPage />
       <SmootherContainer>
         <Hero />
 
