@@ -28,7 +28,7 @@ const Contact = () => {
           <input
             type="email"
             id="email"
-            className="border-b border-gray-300 focus:ring-0 placeholder-black focus:outline-none focus:border-black block w-full py-2.5"
+            className="border-b text-4xl focus:ring-0 placeholder-black focus:outline-none focus:border-black block w-full py-2.5"
             placeholder="Email"
             required
           />
@@ -41,7 +41,7 @@ const Contact = () => {
           <input
             type="text"
             id="subject"
-            className="block py-2.5 w-full border-b border-gray-300 focus:ring-0 placeholder-black focus:outline-none focus:border-black"
+            className="block text-4xl py-2.5 w-full border-b focus:ring-0 placeholder-black focus:outline-none focus:border-black"
             placeholder="Subject"
             required
           />
@@ -53,7 +53,7 @@ const Contact = () => {
             </label> */}
           <textarea
             id="message"
-            className="block py-2.5 w-full border-b border-gray-300 focus:ring-0 placeholder-black focus:outline-none focus:border-black"
+            className="block text-4xl py-2.5 w-full border-b focus:ring-0 placeholder-black focus:outline-none focus:border-black"
             placeholder="Message"
           ></textarea>
         </div>
