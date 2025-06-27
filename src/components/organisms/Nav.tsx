@@ -69,7 +69,7 @@ const Nav = () => {
         </Link>
       </div>
 
-      <div className="flex justify-center overflow-hidden relative">
+      <div className={cn("flex justify-center overflow-hidden relative")}>
         <Link
           className={cn(
             showNav ? "translate-y-0" : "-translate-y-full",
