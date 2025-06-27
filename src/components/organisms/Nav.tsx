@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 const subNavItems = [
   { title: "About", href: "/#about" },
   { title: "Manifest", href: "/#manifest" },
+  { title: "KPI's", href: "/#kpis" },
   { title: "Services", href: "/#services" },
   { title: "Contact", href: "/contact" },
 ];
@@ -62,7 +63,7 @@ const Nav = () => {
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-3 w-full uppercase items-center transition duration-300"
+        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition duration-300"
       )}
     >
       {/* Left Part Start */}

@@ -78,7 +78,7 @@ const Manifest = () => {
             Manifest
           </h2>
 
-          <div className="max-w-[20ch] text-pretty indent-24">
+          <div className="max-w-xl text-pretty indent-24">
             {manifestItems.map((item, i) => (
               <span
                 key={i}

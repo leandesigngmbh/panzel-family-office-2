@@ -1,3 +1,4 @@
+import Contact from "@/components/molecules/Contact";
 import Hero from "@/components/molecules/Hero";
 import Intro from "@/components/molecules/Intro";
 import Manifest from "@/components/molecules/Manifest";
@@ -21,6 +22,8 @@ const Home = () => {
         <StatsSection />
 
         <Team />
+
+        <Contact />
       </main>
 
       <Footer />

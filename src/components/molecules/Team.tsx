@@ -44,13 +44,13 @@ const TeamItem: React.FC<TeamMemberProps> = ({
         <Image src={img} fill alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div className="flex max-w-lg flex-col gap-3 col-span-2">
+      <div className="flex max-w-xl flex-col gap-3 col-span-2">
         <div>
           <h3 className="text-4xl">{name}</h3>
           <span className="text-base text-red">[ {position} ]</span>
         </div>
 
-        <p>{about}</p>
+        <p className="indent-12">{about}</p>
       </div>
     </li>
   );
@@ -59,15 +59,17 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 const Team = () => {
   return (
     <section id="team" className="flex py-24 px-4 w-full">
-      <div className="basis-1/3">
-        <h2 className="whitespace-nowrap uppercase text-base text-red">Team</h2>
-      </div>
+      <div className="basis-1/3"></div>
 
-      <ul className="basis-2/3 grid grid-cols-2 gap-24">
-        {teamMembers.map((props, i) => {
-          return <TeamItem key={i} {...props} />;
-        })}
-      </ul>
+      <div className="basis-2/3 flex flex-col gap-12">
+        <h2 className="whitespace-nowrap uppercase text-base text-red">Team</h2>
+
+        <ul className="w-full grid grid-cols-2 gap-24">
+          {teamMembers.map((props, i) => {
+            return <TeamItem key={i} {...props} />;
+          })}
+        </ul>
+      </div>
     </section>
   );
 };
