@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import SmootherContainer from "@/components/atoms/SmootherContainer";
+import Nav from "@/components/organisms/Nav";
 
 const suisseIntl = localFont({
   src: [
@@ -48,7 +50,11 @@ export default function RootLayout({
       <body
         className={`${suisseIntl.variable} ${ot2049.variable} font-normal font-primary subpixel-antialiased tracking-tight`}
       >
-        <div>{children}</div>
+        <Nav />
+
+        <SmootherContainer>
+          <div>{children}</div>
+        </SmootherContainer>
       </body>
     </html>
   );

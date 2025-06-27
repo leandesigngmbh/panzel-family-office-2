@@ -117,12 +117,13 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
         {mainItem && (
           <div
             className={cn(
-              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 bg-white"
+              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 bg-white w-full grow"
             )}
           >
             {mainItem.prefix && (
               <span className="text-base">{mainItem.prefix}</span>
             )}
+
             <div className="w-full">
               <CountUp from={+mainItem.from} to={+mainItem.to} />
               {mainItem.suffix && <span>{mainItem.suffix}</span>}

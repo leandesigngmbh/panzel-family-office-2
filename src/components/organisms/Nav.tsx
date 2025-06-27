@@ -24,7 +24,7 @@ const Nav = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrolledQuiteABit(currentScrollY > 1000);
+      setScrolledQuiteABit(currentScrollY > 755);
       setScrolled(currentScrollY > 0);
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
@@ -50,7 +50,7 @@ const Nav = () => {
             y: 0,
             opacity: 1,
             duration: 0.3,
-            stagger: 0.2,
+            stagger: 0.1,
             ease: "power2.out",
           }
         );
