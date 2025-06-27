@@ -139,17 +139,17 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
 
 const StatsSection = () => {
   return (
-    <ul id="kpis" className="w-full flex flex-col py-24">
+    <section id="kpis" className="w-full flex flex-col py-24">
       <h2 className="whitespace-nowrap p-4 uppercase text-base text-red">
         Key Performance Indicators
       </h2>
 
-      <div className="w-full flex flex-col border-black/20 border-t">
+      <ul className="w-full flex flex-col border-black/20 border-t">
         {statsItems.map((item, i) => (
           <StatsItem {...item} key={i} />
         ))}
-      </div>
-    </ul>
+      </ul>
+    </section>
   );
 };
 

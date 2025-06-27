@@ -54,6 +54,7 @@ const Principles = () => {
 
   return (
     <section
+      id="manifest"
       ref={container}
       className="relative leading-none grid text-[5vw] py-24 font-secondary uppercase px-4 text-pretty"
     >

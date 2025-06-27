@@ -46,7 +46,7 @@ const Manifest = () => {
   }, []);
 
   return (
-    <div
+    <section
       id="manifest"
       ref={container}
       className="text-4xl flex relative w-full"
@@ -93,7 +93,7 @@ const Manifest = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
