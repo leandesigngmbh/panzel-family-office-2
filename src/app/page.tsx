@@ -3,6 +3,7 @@ import Intro from "@/components/molecules/Intro";
 import Manifest from "@/components/molecules/Manifest";
 import Priciples from "@/components/molecules/Priciples";
 import StatsSection from "@/components/molecules/StatsSection";
+import Team from "@/components/molecules/Team";
 import Footer from "@/components/organisms/Footer";
 
 const Home = () => {
@@ -18,6 +19,8 @@ const Home = () => {
         <Manifest />
 
         <StatsSection />
+
+        <Team />
       </main>
 
       <Footer />

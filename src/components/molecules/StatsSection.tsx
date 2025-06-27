@@ -79,12 +79,12 @@ const statsItems: StatsItemProps[] = [
 
 const RemainingStatsItems = ({ items }: RemainingStatsItemProps) => {
   return (
-    <div className="w-full flex text-4xl gap-px bg-black">
+    <div className="w-full flex text-4xl">
       {items.map((item, i) => (
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end p-3 bg-white grow w-full"
+            "flex flex-col items-start justify-end p-3 grow w-full not-last:border-r border-black/20"
           )}
           style={{ width: `${item.to}%` }}
         >
@@ -107,17 +107,17 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
   const otherItems = subItems.slice(1);
 
   return (
-    <li className="flex w-full bg-black gap-px group">
-      <div className="flex flex-col p-4 min-h-52 gap-2 max-w-md w-full bg-white">
+    <li className="flex w-full group border-b border-black/20">
+      <div className="flex flex-col p-4 min-h-52 gap-2 max-w-md w-full border-r border-black/20">
         <h2 className="text-4xl">{title}</h2>
         <p>{subtitle}</p>
       </div>
 
-      <div className={cn("flex-1 flex flex-col justify-end bg-black gap-px")}>
+      <div className={cn("flex-1 flex flex-col justify-end")}>
         {mainItem && (
           <div
             className={cn(
-              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 bg-white w-full grow"
+              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow border-b border-black/20"
             )}
           >
             {mainItem.prefix && (
@@ -139,12 +139,12 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
 
 const StatsSection = () => {
   return (
-    <ul id="kpis" className="w-full flex flex-col">
+    <ul id="kpis" className="w-full flex flex-col py-24">
       <h2 className="whitespace-nowrap p-4 uppercase text-base text-red">
         Key Performance Indicators
       </h2>
 
-      <div className="w-full flex flex-col bg-black border-black border-t gap-px">
+      <div className="w-full flex flex-col border-black/20 border-t">
         {statsItems.map((item, i) => (
           <StatsItem {...item} key={i} />
         ))}
