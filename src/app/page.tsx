@@ -7,12 +7,11 @@ import StatsSection from "@/components/molecules/StatsSection";
 import Footer from "@/components/organisms/Footer";
 import Nav from "@/components/organisms/Nav";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Nav />
 
-      {/* <NavOnPage /> */}
       <SmootherContainer>
         <Hero />
 
@@ -30,4 +29,6 @@ export default function Home() {
       </SmootherContainer>
     </>
   );
-}
+};
+
+export default Home;

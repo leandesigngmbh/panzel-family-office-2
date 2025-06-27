@@ -84,12 +84,11 @@ const RemainingStatsItems = ({ items }: RemainingStatsItemProps) => {
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end p-3 bg-white"
-            // subItemPatterns[i]
+            "flex flex-col items-start justify-end p-3 bg-white grow w-full"
           )}
           style={{ width: `${item.to}%` }}
         >
-          <div className="bg-white leading-none">
+          <div className="leading-none">
             {item.prefix && <span className="text-base">{item.prefix}</span>}
 
             <div>
@@ -119,13 +118,12 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
           <div
             className={cn(
               "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 bg-white"
-              //   mainPattern
             )}
           >
             {mainItem.prefix && (
               <span className="text-base">{mainItem.prefix}</span>
             )}
-            <div className="">
+            <div className="w-full">
               <CountUp from={+mainItem.from} to={+mainItem.to} />
               {mainItem.suffix && <span>{mainItem.suffix}</span>}
             </div>
