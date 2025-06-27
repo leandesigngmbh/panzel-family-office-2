@@ -58,16 +58,16 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 
 const Team = () => {
   return (
-    <div className="grid grid-cols-3 py-24 gap-24 px-4 w-full">
-      <div className="row-span-2">
-        <h2 className="whitespace-nowrap uppercase text-base text-red col-span-1">
-          Team
-        </h2>
+    <div className="flex py-24 px-4 w-full">
+      <div className="basis-1/3">
+        <h2 className="whitespace-nowrap uppercase text-base text-red">Team</h2>
       </div>
 
-      {teamMembers.map((props, i) => {
-        return <TeamItem key={i} {...props} />;
-      })}
+      <div className="basis-2/3 grid grid-cols-2 gap-24">
+        {teamMembers.map((props, i) => {
+          return <TeamItem key={i} {...props} />;
+        })}
+      </div>
     </div>
   );
 };

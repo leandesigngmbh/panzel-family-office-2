@@ -107,13 +107,13 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
   const otherItems = subItems.slice(1);
 
   return (
-    <li className="flex w-full group border-b border-black/20">
-      <div className="flex flex-col p-4 min-h-52 gap-2 max-w-md w-full border-r border-black/20">
+    <li className="grid grid-cols-3 w-full group border-b border-black/20">
+      <div className="flex flex-col p-4 min-h-52 gap-2 w-full border-r border-black/20">
         <h2 className="text-4xl">{title}</h2>
         <p>{subtitle}</p>
       </div>
 
-      <div className={cn("flex-1 flex flex-col justify-end")}>
+      <div className={cn("flex-1 flex flex-col justify-end col-span-2")}>
         {mainItem && (
           <div
             className={cn(
