@@ -11,18 +11,21 @@ const subNavItems = [
   { title: "About", href: "/#about" },
   { title: "Manifest", href: "/#manifest" },
   { title: "Services", href: "/#services" },
+  { title: "Contact", href: "/contact" },
 ];
 
 const Nav = () => {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrolledQuiteABit, setScrolledQuiteABit] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const subNavRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrolled(currentScrollY > 1000);
+      setScrolledQuiteABit(currentScrollY > 1000);
+      setScrolled(currentScrollY > 0);
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setShowNav(false);
@@ -59,20 +62,28 @@ const Nav = () => {
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 p-4 grid grid-cols-3 w-full uppercase items-center transition duration-300",
-        scrolled ? "bg-white text-red" : "bg-transparent text-white"
+        "fixed z-50 text-white top-0 inset-x-0 p-4 grid grid-cols-3 w-full uppercase items-center transition duration-300"
       )}
     >
-      <div className="flex justify-start">
+      {/* Left Part Start */}
+      <div
+        className={cn(
+          scrolled ? "opacity-0" : "opacity-100",
+          "flex justify-start transition duration-300"
+        )}
+      >
         <Link href="/">
           <Logo />
         </Link>
       </div>
+      {/* Left Part End */}
 
-      <div className={cn("flex justify-center overflow-hidden relative")}>
+      {/* Mid Part Start */}
+      <div className={cn("flex justify-center overflow-hidden relative py-1")}>
         <Link
           className={cn(
-            showNav ? "translate-y-0" : "-translate-y-full",
+            showNav ? "translate-y-0" : "-translate-y-8",
+            scrolledQuiteABit ? "text-red" : "bg-transparent text-white",
             "transition duration-300"
           )}
           href="/"
@@ -84,9 +95,16 @@ const Nav = () => {
           ref={subNavRef}
           className={cn(
             "absolute transition duration-300 flex gap-6",
-            showNav ? "translate-y-full" : "-translate-y-0"
+            showNav ? "translate-y-8" : "-translate-y-0",
+            scrolledQuiteABit ? "text-red" : "bg-transparent text-white"
           )}
         >
+          <div className="subnav-link opacity-0">
+            <Link href="/">
+              <Logo />
+            </Link>
+          </div>
+
           {subNavItems.map(({ title, href }, i) => (
             <Link href={href} key={i} className="subnav-link opacity-0">
               {title}
@@ -94,10 +112,18 @@ const Nav = () => {
           ))}
         </div>
       </div>
+      {/* Mid Part End */}
 
-      <div className="flex justify-end">
+      {/* Right Part Start */}
+      <div
+        className={cn(
+          "flex justify-end",
+          scrolled ? "opacity-0" : "opacity-100"
+        )}
+      >
         <Link href="/#contact">Contact</Link>
       </div>
+      {/* Right Part End */}
     </nav>
   );
 };
