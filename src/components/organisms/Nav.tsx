@@ -62,7 +62,7 @@ const Nav = () => {
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 p-4 grid grid-cols-3 w-full uppercase items-center transition duration-300"
+        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-3 w-full uppercase items-center transition duration-300"
       )}
     >
       {/* Left Part Start */}
