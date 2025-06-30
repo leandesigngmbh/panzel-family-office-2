@@ -95,10 +95,12 @@ const Manifest = () => {
       <div className="large-number-container w-1/2 flex justify-start items-start h-screen px-8 py-16">
         <div className="flex space-x-2 text-[16vw] font-bold text-red leading-none">
           {[0, 1, 2].map((i) => (
-            <div key={i} className="overflow-hidden h-[1em]">
+            <div key={i} className="overflow-y-hidden h-[1em] tracking-tight">
               <div ref={setDigitRef(i)} className="flex flex-col">
                 {digits.map((d) => (
-                  <div key={d}>{d}</div>
+                  <div className="inline" key={d}>
+                    {d}
+                  </div>
                 ))}
               </div>
             </div>
