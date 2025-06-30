@@ -53,7 +53,7 @@ const Contact = () => {
             </label> */}
           <textarea
             id="message"
-            className="block text-4xl py-2.5 w-full border-b focus:ring-0 placeholder-black focus:outline-none focus:border-black"
+            className="block min-h-40 text-4xl py-2.5 w-full border-b focus:ring-0 placeholder-black focus:outline-none focus:border-black"
             placeholder="Message"
           ></textarea>
         </div>

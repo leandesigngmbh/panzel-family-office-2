@@ -30,12 +30,7 @@ const Principles = () => {
     { scope: container }
   );
 
-  const text = `
-    Build on Legacy. Our Swiss-based family office draws strength from generations
-    of entrepreneurial spirit, ensuring long-term stewardship of wealth with discretion
-    and care. Driven by Innovation, we embrace forward-thinking investment strategies,
-    combining tradition with progressive insight to shape the future for the next generation.
-  `;
+  const text = `Build on Legacy. Our Swiss-based family office draws strength from generations of entrepreneurial spirit, ensuring long-term stewardship of wealth with discretion and care. Driven by Innovation, we embrace forward-thinking investment strategies, combining tradition with progressive insight to shape the future for the next generation.`;
 
   const animatedText = text.split(" ").map((word, i) => {
     const isRed =
