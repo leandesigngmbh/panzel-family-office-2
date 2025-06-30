@@ -100,7 +100,7 @@ const Manifest = () => {
   return (
     <section
       className={cn(
-        "py-24 transition-colors duration-500",
+        "py-24 transition-colors duration-300",
         inView ? "bg-red" : "bg-white"
       )}
     >
@@ -147,7 +147,9 @@ const Manifest = () => {
                   key={i}
                   className={cn(
                     "transition-opacity duration-300",
-                    i === activeIndex ? "text-white" : "text-white/20"
+                    inView ? "text-white" : "text-black",
+
+                    i === activeIndex ? "opacity-100" : "opacity-20"
                   )}
                 >
                   {item + " "}
