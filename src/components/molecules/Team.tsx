@@ -4,7 +4,7 @@ import Image from "next/image";
 type TeamMemberProps = {
   name: string;
   position: string;
-  img: string;
+  img?: string;
   about?: string;
 };
 
@@ -26,7 +26,7 @@ const teamMembers = [
   {
     name: "Dr. Annette Ryčl",
     position: "Headhunting",
-    img: "/assets/team/Nadine-portrait-min.jpg",
+    // img: "/assets/team/Nadine-portrait-min.jpg",
     about:
       "Annette is Chairwoman of Board of Panzel Family Office since 1990. She has been working more than 30 years as a retained Headhunter in Geneva and Zurich for legal Board Advisory and Placements and Recruitments for top tier leadership positions but for women only. She worked in Germany, Norway, Sweden and Switzerland mainly for IR Automotive, Telco and later Private Investment Banking and Wealth Mgt, recruiting investment talent for midsize ($10-500m) Single Family Offices. She studied at University Paris Sorbonne 1 (Panthéon) Philosophy, Political and Social Science and Human Resources. She still advised family dynasties in Canada, Germany, Norway, Sweden and Switzerland and holds lecturers and speeches at WEF, London School of Economics and INSEAD.",
   },
@@ -40,8 +40,12 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 }) => {
   return (
     <li className="flex flex-col gap-6 w-full items-start">
-      <div className="aspect-[4/5] w-52 shrink-0 bg-red overflow-clip relative">
-        <Image src={img} fill alt="" className="w-full h-full object-cover" />
+      <div className="aspect-[4/5] w-52 shrink-0 overflow-clip relative">
+        {img ? (
+          <Image src={img} fill alt="" className="w-full h-full object-cover" />
+        ) : (
+          <div className="absolute inset-0 bg-black animate-pulse" />
+        )}
       </div>
 
       <div className="flex max-w-xl flex-col gap-3 col-span-2">
