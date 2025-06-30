@@ -4,7 +4,7 @@ import Spline from "@splinetool/react-spline";
 
 const Hero = () => {
   return (
-    <section className="h-[150vh]">
+    <section className="h-screen sm:h-[150vh]">
       {/* Content */}
       <div data-speed="0.2" className="h-full">
         <Spline

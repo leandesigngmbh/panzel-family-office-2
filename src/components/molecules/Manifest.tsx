@@ -104,9 +104,12 @@ const Manifest = () => {
         inView ? "bg-red" : "bg-white"
       )}
     >
-      <div ref={container} className="text-4xl flex relative w-full">
+      <div
+        ref={container}
+        className="text-3xl md:text-4xl flex relative w-full"
+      >
         {/* LEFT PINNED INDEX */}
-        <div className="large-number-container w-1/2 flex justify-start items-start h-screen px-8 py-16">
+        <div className="large-number-container md:w-1/2 flex justify-start items-start h-screen px-4 md:px-8 py-16">
           <div className="flex text-[16vw] font-bold text-black leading-none">
             {[0, 1, 2].map((i) => (
               <div key={i} className="overflow-y-hidden h-[1em]">
@@ -135,7 +138,7 @@ const Manifest = () => {
         </div>
 
         {/* RIGHT PINNED MANIFEST TEXTS */}
-        <div className="manifest-right w-1/2 h-screen flex justify-end items-end p-4">
+        <div className="manifest-right md:w-1/2 w-full h-screen absolute top-0 sm:relative flex justify-end items-end p-4">
           <div>
             <h2 className="whitespace-nowrap uppercase text-base text-black">
               Manifest

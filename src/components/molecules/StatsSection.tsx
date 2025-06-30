@@ -79,17 +79,21 @@ const statsItems: StatsItemProps[] = [
 
 const RemainingStatsItems = ({ items }: RemainingStatsItemProps) => {
   return (
-    <div className="w-full flex text-4xl">
+    <div className="w-full flex text-2xl md:text-4xl">
       {items.map((item, i) => (
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end p-3 grow w-full not-last:border-r border-black/20"
+            "flex flex-col items-start justify-end md:p-4 px-1 py-4 grow w-full not-last:border-r border-black/20"
           )}
           style={{ width: `${item.to}%` }}
         >
-          <div className="leading-none">
-            {item.prefix && <span className="text-base">{item.prefix}</span>}
+          <div>
+            {item.prefix && (
+              <span className="text-xs uppercase leading-none">
+                {item.prefix}
+              </span>
+            )}
 
             <div>
               <CountUp from={+item.from} to={+item.to} />
@@ -107,9 +111,9 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
   const otherItems = subItems.slice(1);
 
   return (
-    <li className="grid grid-cols-3 w-full group border-b border-black/20">
-      <div className="flex flex-col p-4 min-h-52 gap-2 w-full border-r border-black/20">
-        <h2 className="text-4xl">{title}</h2>
+    <li className="grid md:grid-cols-3 w-full group border-b border-black/20">
+      <div className="flex flex-col md:p-4 p-2 md:min-h-52 gap-2 w-full md:border-r border-black/20">
+        <h2 className="text-2xl md:text-4xl">{title}</h2>
         <p>{subtitle}</p>
       </div>
 
@@ -117,7 +121,7 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
         {mainItem && (
           <div
             className={cn(
-              "px-3 text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow border-b border-black/20"
+              "md:px-4 px-2 text-6xl md:text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow border-b border-black/20"
             )}
           >
             {mainItem.prefix && (

@@ -13,7 +13,7 @@ const textVariants = cva("text-pretty indent-24", {
   variants: {
     size: {
       small: "text-base",
-      default: "text-4xl",
+      default: "text-3xl md:text-4xl",
     },
     width: {
       narrow: "max-w-xl",
