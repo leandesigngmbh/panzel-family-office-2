@@ -1,15 +1,26 @@
 import Logo from "@/components/atoms/Logo";
+import Link from "next/link";
+
+const footerLinks = [
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Contact", href: "/#contact" },
+  { label: "Legal Notices", href: "legal-notices" },
+];
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-100 bg-red text-white text-xs p-4 min-h-64 flex flex-col justify-between">
+    <footer className="w-full bg-red text-white text-xs p-4 min-h-64 flex flex-col justify-between">
       <div className="flex justify-between">
         <Logo />
 
         <ul className="flex gap-3 uppercase">
-          <li>Terms & Conditions</li>
-          <li>Contact</li>
-          <li>Legal Notices</li>
+          {footerLinks.map(({ label, href }, i) => {
+            return (
+              <li key={i}>
+                <Link href={href}>{label} </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
 

@@ -22,6 +22,7 @@ const digits = Array.from({ length: 10 }, (_, i) => i);
 
 const Manifest = () => {
   const container = useRef(null);
+  const [inView, setInView] = useState(false);
   const digitRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const currentIndex = useRef(0);
@@ -80,13 +81,29 @@ const Manifest = () => {
       scrub: true,
     });
 
+    // Set background color when in view
+    const bgTrigger = ScrollTrigger.create({
+      trigger: container.current,
+      start: "top top+=1",
+      end: "bottom top+=1",
+      onEnter: () => setInView(true),
+      onLeave: () => setInView(false),
+      onEnterBack: () => setInView(true),
+      onLeaveBack: () => setInView(false),
+    });
+
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
 
   return (
-    <section className="py-24 bg-red">
+    <section
+      className={cn(
+        "py-24 transition-colors duration-500",
+        inView ? "bg-red" : "bg-white"
+      )}
+    >
       <div ref={container} className="text-4xl flex relative w-full">
         {/* LEFT PINNED INDEX */}
         <div className="large-number-container w-1/2 flex justify-start items-start h-screen px-8 py-16">
