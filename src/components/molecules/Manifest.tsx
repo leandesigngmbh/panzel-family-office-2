@@ -18,13 +18,40 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+const digits = Array.from({ length: 10 }, (_, i) => i);
+
 const Manifest = () => {
   const container = useRef(null);
-  const numberRef = useRef<HTMLSpanElement>(null);
+  const digitRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
-  const currentIndex = useRef(0); // avoid infinite updates
+  const currentIndex = useRef(0);
+
+  const setDigitRef = (index: number) => (el: HTMLDivElement | null) => {
+    digitRefs.current[index] = el;
+  };
 
   useEffect(() => {
+    function animateToIndex(index: number) {
+      if (currentIndex.current === index) return;
+      currentIndex.current = index;
+      setActiveIndex(index);
+
+      const padded = (index + 1).toString().padStart(3, "0").split("");
+
+      padded.forEach((digit, i) => {
+        const container = digitRefs.current[i];
+        if (!container) return;
+
+        const digitHeight = container.clientHeight / 10;
+
+        gsap.to(container, {
+          y: -parseInt(digit) * digitHeight,
+          duration: 0.6,
+          ease: "power2.out",
+        });
+      });
+    }
+
     const triggers = gsap.utils.toArray<HTMLElement>(".index-trigger");
 
     triggers.forEach((trigger, index) => {
@@ -53,25 +80,6 @@ const Manifest = () => {
       scrub: true,
     });
 
-    function animateToIndex(index: number) {
-      if (currentIndex.current === index) return;
-      currentIndex.current = index;
-      setActiveIndex(index);
-
-      const obj = { val: currentIndex.current + 1 };
-      gsap.to(obj, {
-        val: index + 1,
-        duration: 0.5,
-        ease: "power2.out",
-        roundProps: "val",
-        onUpdate: () => {
-          if (numberRef.current) {
-            numberRef.current.innerText = obj.val.toString().padStart(3, "0");
-          }
-        },
-      });
-    }
-
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
@@ -85,32 +93,39 @@ const Manifest = () => {
     >
       {/* LEFT PINNED INDEX */}
       <div className="large-number-container w-1/2 flex justify-start items-start h-screen px-8 py-16">
-        <span
-          ref={numberRef}
-          className="text-[16vw] text-red leading-none font-bold transition duration-300"
-        >
-          001
-        </span>
+        <div className="flex space-x-2 text-[16vw] font-bold text-red leading-none">
+          {[0, 1, 2].map((i) => (
+            <div key={i} className="overflow-hidden h-[1em]">
+              <div ref={setDigitRef(i)} className="flex flex-col">
+                {digits.map((d) => (
+                  <div key={d}>{d}</div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Invisible triggers for scroll tracking */}
       <div className="w-0">
+        <div className="h-[50vh]"></div>
         {manifestItems.map((_, i) => (
           <div
             key={i}
-            className="index-trigger h-[100vh] w-full pointer-events-none"
+            className="index-trigger h-[50vh] w-full pointer-events-none"
           />
         ))}
+        <div className="h-[50vh]"></div>
       </div>
 
       {/* RIGHT PINNED MANIFEST TEXTS */}
       <div className="manifest-right w-1/2 h-screen flex justify-end items-end p-4">
         <div>
-          <h2 className="whitespace-nowrap uppercase text-base text-red mb-4">
+          <h2 className="whitespace-nowrap uppercase text-base text-red">
             Manifest
           </h2>
 
-          <p className="max-w-xl text-pretty indent-24 leading-snug">
+          <p className="max-w-xl text-pretty indent-24">
             {manifestItems.map((item, i) => (
               <span
                 key={i}

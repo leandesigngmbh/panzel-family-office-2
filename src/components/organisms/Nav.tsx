@@ -12,7 +12,7 @@ const subNavItems = [
   { title: "Manifest", href: "/#manifest" },
   { title: "KPI's", href: "/#kpis" },
   { title: "Services", href: "/#services" },
-  { title: "Contact", href: "/contact" },
+  { title: "Contact", href: "/#contact" },
 ];
 
 const Nav = () => {
