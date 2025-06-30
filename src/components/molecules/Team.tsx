@@ -42,7 +42,12 @@ const TeamItem: React.FC<TeamMemberProps> = ({
     <li className="flex flex-col gap-6 w-full items-start">
       <div className="aspect-[4/5] w-52 shrink-0 overflow-clip relative">
         {img ? (
-          <Image src={img} fill alt="" className="w-full h-full object-cover" />
+          <Image
+            src={img}
+            fill
+            alt={`Team Photo of ${name}`}
+            className="w-full h-full object-cover"
+          />
         ) : (
           <div className="absolute inset-0 bg-black animate-pulse" />
         )}

@@ -4,11 +4,11 @@ import Spline from "@splinetool/react-spline";
 
 const Hero = () => {
   return (
-    <section className="h-screen">
+    <section className="h-[150vh]">
       {/* Content */}
-      <div data-speed="0.2">
+      <div data-speed="0.2" className="h-full">
         <Spline
-          style={{ height: "100vh" }}
+          style={{ height: "100%" }}
           scene="https://prod.spline.design/vmkVRuLus8-blXQe/scene.splinecode"
         />
       </div>
