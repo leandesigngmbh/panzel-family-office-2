@@ -11,7 +11,7 @@ const subNavItems = [
   { title: "About", href: "/#about" },
   { title: "Manifest", href: "/#manifest" },
   { title: "KPI's", href: "/#kpis" },
-  { title: "Services", href: "/#services" },
+  { title: "Team", href: "/#team" },
   { title: "Contact", href: "/#contact" },
 ];
 
