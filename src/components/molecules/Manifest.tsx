@@ -86,7 +86,7 @@ const Manifest = () => {
   }, []);
 
   return (
-    <section id="manifest" className="py-24 bg-red">
+    <section className="py-24 bg-red">
       <div ref={container} className="text-4xl flex relative w-full">
         {/* LEFT PINNED INDEX */}
         <div className="large-number-container w-1/2 flex justify-start items-start h-screen px-8 py-16">

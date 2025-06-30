@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useNavColor } from "@/lib/contexts/NavColorContext";
 
 const subNavItems = [
   { title: "About", href: "/#about" },
@@ -18,14 +19,13 @@ const subNavItems = [
 const Nav = () => {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrolledQuiteABit, setScrolledQuiteABit] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const subNavRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setScrolledQuiteABit(currentScrollY > 755);
+
       setScrolled(currentScrollY > 0);
 
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
@@ -60,10 +60,13 @@ const Nav = () => {
     { scope: subNavRef, dependencies: [showNav] }
   );
 
+  const { isLightNav } = useNavColor();
+
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition duration-300"
+        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition duration-300",
+        isLightNav ? "text-white" : "text-red"
       )}
     >
       {/* Left Part Start */}
@@ -84,7 +87,7 @@ const Nav = () => {
         <Link
           className={cn(
             showNav ? "translate-y-0" : "-translate-y-8",
-            scrolledQuiteABit ? "text-red" : "bg-transparent text-white",
+
             "transition duration-300"
           )}
           href="/"
@@ -96,8 +99,7 @@ const Nav = () => {
           ref={subNavRef}
           className={cn(
             "absolute transition duration-300 flex gap-6",
-            showNav ? "translate-y-8" : "-translate-y-0",
-            scrolledQuiteABit ? "text-red" : "bg-transparent text-white"
+            showNav ? "translate-y-8" : "-translate-y-0"
           )}
         >
           <div className="subnav-link opacity-0">

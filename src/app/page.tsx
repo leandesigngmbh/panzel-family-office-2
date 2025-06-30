@@ -1,3 +1,4 @@
+import NavColorSwitcher from "@/components/atoms/NavColorSwitcher";
 import Contact from "@/components/molecules/Contact";
 import Hero from "@/components/molecules/Hero";
 import Intro from "@/components/molecules/Intro";
@@ -10,14 +11,18 @@ import Footer from "@/components/organisms/Footer";
 const Home = () => {
   return (
     <>
-      <Hero />
+      <NavColorSwitcher id="hero" light={true}>
+        <Hero />
+      </NavColorSwitcher>
 
       <main className="bg-white relative">
         <Intro />
 
         <Priciples />
 
-        <Manifest />
+        <NavColorSwitcher id="manifest" light={true}>
+          <Manifest />
+        </NavColorSwitcher>
 
         <StatsSection />
 

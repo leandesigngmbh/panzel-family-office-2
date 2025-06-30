@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SmootherContainer from "@/components/atoms/SmootherContainer";
 import Nav from "@/components/organisms/Nav";
+import { NavColorProvider } from "@/lib/contexts/NavColorContext";
 
 const suisseIntl = localFont({
   src: [
@@ -50,11 +51,13 @@ export default function RootLayout({
       <body
         className={`${suisseIntl.variable} ${ot2049.variable} font-normal font-primary subpixel-antialiased tracking-tight`}
       >
-        <Nav />
+        <NavColorProvider>
+          <Nav />
 
-        <SmootherContainer>
-          <div>{children}</div>
-        </SmootherContainer>
+          <SmootherContainer>
+            <div>{children}</div>
+          </SmootherContainer>
+        </NavColorProvider>
       </body>
     </html>
   );
