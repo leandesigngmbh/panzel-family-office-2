@@ -46,7 +46,8 @@ const TeamItem: React.FC<TeamMemberProps> = ({
             src={img}
             fill
             alt={`Team Photo of ${name}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-110"
+            data-speed="1.05"
           />
         ) : (
           <div className="absolute inset-0 bg-black animate-pulse" />
