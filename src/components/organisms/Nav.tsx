@@ -65,7 +65,7 @@ const Nav = () => {
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition duration-300",
+        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition",
         isLightNav ? "text-white" : "text-red"
       )}
     >
@@ -73,7 +73,7 @@ const Nav = () => {
       <div
         className={cn(
           scrolled ? "opacity-0" : "opacity-100",
-          "flex justify-start transition duration-300"
+          "flex justify-start transition-transform"
         )}
       >
         <Link href="/">
@@ -87,8 +87,7 @@ const Nav = () => {
         <Link
           className={cn(
             showNav ? "translate-y-0" : "-translate-y-8",
-
-            "transition duration-300"
+            "transition-transform"
           )}
           href="/"
         >
@@ -98,7 +97,7 @@ const Nav = () => {
         <div
           ref={subNavRef}
           className={cn(
-            "absolute transition duration-300 flex gap-6",
+            "absolute transition-transform flex gap-6",
             showNav ? "translate-y-8" : "-translate-y-0"
           )}
         >
