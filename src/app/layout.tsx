@@ -54,9 +54,9 @@ export default function RootLayout({
         <NavColorProvider>
           <Nav />
 
-          <SmootherContainer>
-            <div>{children}</div>
-          </SmootherContainer>
+          {/* <SmootherContainer> */}
+          <div>{children}</div>
+          {/* </SmootherContainer> */}
         </NavColorProvider>
       </body>
     </html>
