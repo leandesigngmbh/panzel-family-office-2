@@ -18,7 +18,7 @@ const Home = () => {
       <main className="bg-white relative">
         <Intro />
 
-        <Priciples />
+        {/* <Priciples /> */}
 
         <NavColorSwitcher id="manifest" light={true}>
           <Manifest />
