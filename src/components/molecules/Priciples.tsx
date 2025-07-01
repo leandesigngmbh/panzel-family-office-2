@@ -50,7 +50,7 @@ const Principles = () => {
   return (
     <section
       ref={container}
-      className="relative leading-none grid text-5xl md:text-[5vw] py-24 font-secondary uppercase px-4 text-pretty"
+      className="relative leading-none grid text-4xl md:text-[5vw] py-24 font-secondary uppercase px-4 text-pretty"
     >
       <p className="">{animatedText}</p>
     </section>
