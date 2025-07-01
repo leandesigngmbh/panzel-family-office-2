@@ -27,6 +27,7 @@ const SmootherContainer = ({ children }: SmootherContainerProps) => {
         smooth: 2,
         effects: true,
         // smoothTouch: 0.01,
+        normalizeScroll: true,
       });
     },
     {
