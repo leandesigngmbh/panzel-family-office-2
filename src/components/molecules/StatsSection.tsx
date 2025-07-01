@@ -84,7 +84,7 @@ const RemainingStatsItems = ({ items }: RemainingStatsItemProps) => {
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end md:p-4 px-1 py-4 grow w-full not-last:border-r border-black/20"
+            "flex flex-col items-start justify-end md:p-4 px-2 py-4 grow w-full not-last:border-r border-black/20"
           )}
           style={{ width: `${item.to}%` }}
         >
