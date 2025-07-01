@@ -96,7 +96,7 @@ const RemainingStatsItems = ({ items }: RemainingStatsItemProps) => {
             )}
 
             <div>
-              <CountUp from={+item.from} to={+item.to} />
+              {/* <CountUp from={+item.from} to={+item.to} /> */}
               {item.suffix && <span>{item.suffix}</span>}
             </div>
           </div>
@@ -129,7 +129,7 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
             )}
 
             <div className="w-full">
-              <CountUp from={+mainItem.from} to={+mainItem.to} />
+              {/* <CountUp from={+mainItem.from} to={+mainItem.to} /> */}
               {mainItem.suffix && <span>{mainItem.suffix}</span>}
             </div>
           </div>
