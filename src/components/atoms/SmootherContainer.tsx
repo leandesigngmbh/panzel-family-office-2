@@ -26,6 +26,7 @@ const SmootherContainer = ({ children }: SmootherContainerProps) => {
       smoother.current = ScrollSmoother.create({
         smooth: 2,
         effects: true,
+        smoothTouch: 0.01,
       });
     },
     {
