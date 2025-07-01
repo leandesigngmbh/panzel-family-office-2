@@ -138,7 +138,7 @@ const Manifest = () => {
         </div>
 
         {/* RIGHT PINNED MANIFEST TEXTS */}
-        <div className="manifest-right md:w-1/2 w-full h-screen absolute top-0 sm:relative flex justify-end items-end p-4">
+        <div className="manifest-right md:w-1/2 w-full h-screen absolute top-0 sm:relative flex justify-end items-end p-2 md:p-4">
           <div>
             <h2 className="whitespace-nowrap uppercase text-base text-black">
               Manifest

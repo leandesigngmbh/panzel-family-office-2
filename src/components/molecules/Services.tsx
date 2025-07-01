@@ -2,7 +2,7 @@ import Text from "@/components/atoms/Text";
 
 const Services = () => {
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 md:px-4 px-2">
       <div className="flex justify-start flex-col">
         <h2 className="whitespace-nowrap uppercase text-base text-red">
           Services

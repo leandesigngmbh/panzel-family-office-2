@@ -2,7 +2,7 @@ import Text from "@/components/atoms/Text";
 
 const Intro = () => {
   return (
-    <section id="intro" className="py-24 px-4">
+    <section id="intro" className="py-24 md:px-4 px-2">
       <div className="flex flex-col items-end">
         <div>
           <h2 className="whitespace-nowrap uppercase text-base text-red">

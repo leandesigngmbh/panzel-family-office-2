@@ -68,7 +68,7 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 
 const Team = () => {
   return (
-    <section id="team" className="flex py-24 px-4 w-full">
+    <section id="team" className="flex py-24 md:px-4 px-2 w-full">
       <div className="hidden md:block md:basis-1/3"></div>
 
       <div className="w-full md:basis-2/3 flex flex-col gap-12">

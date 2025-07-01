@@ -9,7 +9,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-red text-white text-xs p-4 min-h-64 flex flex-col justify-between">
+    <footer className="w-full bg-red text-white text-xs md:p-4 p-2 min-h-64 flex flex-col justify-between">
       <div className="flex justify-between">
         <Logo />
 

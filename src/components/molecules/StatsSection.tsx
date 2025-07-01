@@ -144,7 +144,7 @@ const StatsItem = ({ title, subtitle, subItems }: StatsItemProps) => {
 const StatsSection = () => {
   return (
     <section id="kpis" className="w-full flex flex-col py-24">
-      <h2 className="whitespace-nowrap p-4 uppercase text-base text-red">
+      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-red">
         Key Performance Indicators
       </h2>
 

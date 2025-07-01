@@ -65,7 +65,7 @@ const Nav = () => {
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition",
+        "fixed z-50 text-white top-0 inset-x-0 px-2 md:px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition",
         isLightNav ? "text-white" : "text-red"
       )}
     >
