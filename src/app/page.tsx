@@ -11,9 +11,9 @@ import Footer from "@/components/organisms/Footer";
 const Home = () => {
   return (
     <>
-      <NavColorSwitcher id="hero" light={true}>
+      {/* <NavColorSwitcher id="hero" light={true}>
         <Hero />
-      </NavColorSwitcher>
+      </NavColorSwitcher> */}
 
       <main className="bg-white relative">
         <Intro />
