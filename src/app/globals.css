@@ -5,7 +5,8 @@
 
 @theme inline {
 
-  --color-*:initial;
+  /* --color-*:initial; */
+  --color-red-*:initial;
   --color-white: #fff;
   --color-black: #000;
   --color-red: #FF2700;
