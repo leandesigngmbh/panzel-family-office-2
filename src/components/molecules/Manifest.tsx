@@ -70,6 +70,8 @@ const Manifest = () => {
       start: "top top",
       end: "bottom bottom",
       pin: ".manifest-right",
+      pinSpacing: true,
+      anticipatePin: 0.3,
       scrub: true,
     });
 
@@ -78,6 +80,8 @@ const Manifest = () => {
       start: "top top",
       end: "bottom bottom",
       pin: ".large-number-container",
+      pinSpacing: true,
+      anticipatePin: 0.3,
       scrub: true,
     });
 

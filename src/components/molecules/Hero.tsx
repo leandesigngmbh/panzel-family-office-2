@@ -1,6 +1,4 @@
-"use client";
-
-import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline/next";
 
 const Hero = () => {
   return (
