@@ -54,9 +54,9 @@ export default function RootLayout({
         <Providers>
           <Nav />
 
-          <SmootherContainer>
-            <div>{children}</div>
-          </SmootherContainer>
+          {/* <SmootherContainer> */}
+          <div>{children}</div>
+          {/* </SmootherContainer> */}
         </Providers>
       </body>
     </html>
