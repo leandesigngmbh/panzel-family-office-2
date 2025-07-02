@@ -58,7 +58,6 @@ const PinTest = () => {
       {imageUrls.map((image, index) => (
         <div
           key={index}
-          //   ref={(el) => (imagesRef.current[index] = el)}
           ref={(el) => void (imagesRef.current[index] = el)}
           className=""
         >
