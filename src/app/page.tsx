@@ -3,6 +3,7 @@ import Contact from "@/components/molecules/Contact";
 import Hero from "@/components/molecules/Hero";
 import Intro from "@/components/molecules/Intro";
 import Manifest from "@/components/molecules/Manifest";
+import PinTest from "@/components/molecules/PinTest";
 import Priciples from "@/components/molecules/Priciples";
 import StatsSection from "@/components/molecules/StatsSection";
 import Team from "@/components/molecules/Team";
@@ -17,6 +18,8 @@ const Home = () => {
 
       <main className="bg-white relative">
         <Intro />
+
+        <PinTest />
 
         <Priciples />
 
