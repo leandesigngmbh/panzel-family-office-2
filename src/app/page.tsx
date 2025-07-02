@@ -16,6 +16,8 @@ const Home = () => {
         <Hero />
       </NavColorSwitcher> */}
 
+      <PinTest />
+      {/* 
       <main className="bg-white relative">
         <Intro />
 
@@ -34,7 +36,7 @@ const Home = () => {
         <Contact />
       </main>
 
-      <Footer />
+      <Footer /> */}
     </>
   );
 };
