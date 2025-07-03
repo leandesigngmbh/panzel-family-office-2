@@ -16,7 +16,7 @@ export const NavColorProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [isLightNav, setIsLightNav] = useState(true);
+  const [isLightNav, setIsLightNav] = useState(false);
   return (
     <NavColorContext.Provider value={{ isLightNav, setIsLightNav }}>
       {children}

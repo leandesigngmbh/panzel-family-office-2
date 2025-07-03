@@ -11,33 +11,34 @@ import Footer from "@/components/organisms/Footer";
 
 const Home = () => {
   return (
-    <>
-      {/* <NavColorSwitcher id="hero" light={true}>
-        <Hero />
-      </NavColorSwitcher> */}
+    <PinTest />
+    // <>
+    //   {/* <NavColorSwitcher id="hero" light={true}>
+    //     <Hero />
+    //   </NavColorSwitcher> */}
 
-      {/* <PinTest /> */}
+    //   {/* <PinTest /> */}
 
-      <main className="bg-white relative">
-        <Intro />
+    //   <main className="bg-white relative">
+    //     <Intro />
 
-        {/* <PinTest /> */}
+    //     {/* <PinTest /> */}
 
-        <Priciples />
+    //     <Priciples />
 
-        <NavColorSwitcher id="manifest" light={true}>
-          <Manifest />
-        </NavColorSwitcher>
+    //     <NavColorSwitcher id="manifest" light={true}>
+    //       <Manifest />
+    //     </NavColorSwitcher>
 
-        <StatsSection />
+    //     <StatsSection />
 
-        <Team />
+    //     <Team />
 
-        <Contact />
-      </main>
+    //     <Contact />
+    //   </main>
 
-      <Footer />
-    </>
+    //   <Footer />
+    // </>
   );
 };
 
