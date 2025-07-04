@@ -19,8 +19,6 @@ const Home = () => {
         <Hero />
       </NavColorSwitcher>
 
-      {/* <PinTest /> */}
-
       <main className="bg-white relative">
         <IntroNew />
 
