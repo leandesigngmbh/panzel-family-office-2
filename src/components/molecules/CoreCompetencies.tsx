@@ -121,8 +121,7 @@ const CoreCompetencies = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top center",
-            end: "bottom top",
-            scrub: true,
+            toggleActions: "play none none none", // Play animation on enter only
           },
         }
       );
