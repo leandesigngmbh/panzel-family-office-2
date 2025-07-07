@@ -74,7 +74,7 @@ const Team = () => {
       <div className="w-full flex flex-col gap-12">
         <h2 className="whitespace-nowrap uppercase text-base text-red">Team</h2>
 
-        <ul className="w-full grid md:grid-cols-3 gap-9 md:gap-24">
+        <ul className="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-9 md:gap-24">
           {teamMembers.map((props, i) => {
             return <TeamItem key={i} {...props} />;
           })}
