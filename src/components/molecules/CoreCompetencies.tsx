@@ -158,7 +158,7 @@ const CoreCompetencies = () => {
           <div
             key={i}
             ref={(el) => void (circlesRef.current[i] = el)}
-            className="flex items-center justify-center rounded-full h-[25vw] w-[25vw] shadow-lg bg-white/50 text-white text-sm text-center p-4"
+            className="flex items-center justify-center rounded-full h-[25vw] w-[25vw] shadow-lg bg-white/50 text-white text-2xl text-center p-4"
           >
             {label}
           </div>
