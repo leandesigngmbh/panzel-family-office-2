@@ -69,8 +69,6 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 const Team = () => {
   return (
     <section id="team" className="flex py-24 md:px-4 px-2 w-full">
-      {/* <div className="hidden md:block md:basis-1/3"></div> */}
-
       <div className="w-full flex flex-col gap-12">
         <h2 className="whitespace-nowrap uppercase text-base text-red">Team</h2>
 
