@@ -142,7 +142,8 @@ const RemainingStatsItems = ({ items, color }: RemainingStatsItemProps) => {
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end md:p-4 px-2 py-4 grow w-full not-last:border-r border-white",
+            "flex flex-col items-start justify-end md:p-4 px-2 py-4 grow w-full",
+            // "not-last:border-r border-white",
             subItemShades[i]
           )}
           style={{ width: `${item.to}%` }}
@@ -188,7 +189,8 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
         {mainItem && (
           <div
             className={cn(
-              "md:px-4 px-2 text-6xl md:text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow border-b border-white"
+              "md:px-4 px-2 text-6xl md:text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow"
+              // "border-b border-white"
             )}
           >
             {mainItem.prefix && (
