@@ -134,19 +134,19 @@ const CoreCompetencies = () => {
 
   return (
     <section ref={sectionRef} className="text-white overflow-hidden pt-24">
-      <div className="flex gap-8 flex-col px-4">
-        <h2 className="whitespace-nowrap uppercase text-base text-red">
-          About us
-        </h2>
+      <div className="min-h-[200vh] overflow-hidden relative">
+        <div className="flex gap-8 flex-col px-4 absolute top-0 max-w-7xl">
+          <h2 className="whitespace-nowrap uppercase text-base text-red">
+            About us
+          </h2>
 
-        <div className="text-2xl sm:text-4xl md:text-6xl w-full">
-          <h3>
-            PFO is differentiated by a sharp mix of three core competencies.
-          </h3>
+          <div className="text-2xl sm:text-4xl md:text-6xl w-full">
+            <h3>
+              PFO is differentiated by a sharp mix of three core competencies.
+            </h3>
+          </div>
         </div>
-      </div>
 
-      <div className="min-h-[200vh] overflow-hidden">
         <div
           ref={wrapperRef}
           className="relative w-full h-screen flex items-center justify-center"
@@ -155,7 +155,7 @@ const CoreCompetencies = () => {
             <div
               key={i}
               ref={(el) => void (circlesRef.current[i] = el)}
-              className="flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] shadow-lg bg-white/50 text-white text-lg leading-tight md:text-2xl text-center p-4 overflow-hidden"
+              className="flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] shadow-lg bg-red mix-blend-multiply text-white text-lg leading-tight md:text-2xl text-center p-4 overflow-hidden"
             >
               {label}
             </div>
