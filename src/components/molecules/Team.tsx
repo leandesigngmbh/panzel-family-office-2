@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type TeamMemberProps = {
@@ -47,7 +46,8 @@ const TeamItem: React.FC<TeamMemberProps> = ({
             fill
             alt={`Team Photo of ${name}`}
             className="w-full h-full object-cover scale-110"
-            // data-speed="1.05"
+            loading="eager"
+            // placeholder="blur"
           />
         ) : (
           <div className="absolute inset-0 bg-black animate-pulse" />
