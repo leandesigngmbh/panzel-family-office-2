@@ -144,30 +144,29 @@ const RemainingStatsItems = ({ items, color }: RemainingStatsItemProps) => {
   const subItemShades = items.map(
     (_, i) => fullShades[i % fullShades.length] ?? "bg-gray-100"
   );
+
   return (
     <div className="w-full flex">
       {items.map((item, i) => (
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end md:p-4 px-1 py-4 overflow-hidden grow w-full",
-            // "not-last:border-r border-white",
-            subItemShades[i]
+            "flex flex-col items-start justify-end overflow-hidden grow w-full"
           )}
           style={{ width: `${item.to}%` }}
         >
-          <div>
+          <div className="md:px-4 px-1 py-2">
             {item.prefix && <p className="text-xs uppercase">{item.prefix}</p>}
+          </div>
 
-            <div>
-              <span className="text-2xl md:text-4xl">
-                <CountUp from={+item.from} to={+item.to} />
-              </span>
-
-              {item.suffix && (
-                <span className="text-xs uppercase">{item.suffix}</span>
-              )}
-            </div>
+          <div
+            className={cn(
+              subItemShades[i],
+              "w-full p-2 pt-3 md:p-4 md:pt-5 text-xs md:text-2xl xl:text-4xl leading-none"
+            )}
+          >
+            <CountUp from={+item.from} to={+item.to} />
+            {item.suffix && <span> {item.suffix}</span>}
           </div>
         </div>
       ))}
@@ -198,7 +197,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
         )}
       >
         {mainItem && (
-          <div className="md:px-4 px-2 text-6xl md:text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow">
+          <div className="md:px-4 px-2 text-6xl md:text-8xl pb-24 py-6 flex flex-col items-baseline gap-2 w-full grow">
             {mainItem.prefix && (
               <span className="text-base">{mainItem.prefix}</span>
             )}
