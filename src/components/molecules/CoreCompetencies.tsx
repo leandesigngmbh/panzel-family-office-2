@@ -24,8 +24,8 @@ const CoreCompetencies = () => {
         xPercent: -50,
         yPercent: -50,
         x: 0,
-        y: "-12vw",
-        scale: 0,
+        y: "-10vw",
+        scale: 0.5,
         opacity: 0,
         position: "absolute",
         top: "50%",
@@ -36,8 +36,8 @@ const CoreCompetencies = () => {
         xPercent: -50,
         yPercent: -50,
         x: "-12vw",
-        y: "8vw",
-        scale: 0,
+        y: "10vw",
+        scale: 0.5,
         opacity: 0,
         position: "absolute",
         top: "50%",
@@ -48,8 +48,8 @@ const CoreCompetencies = () => {
         xPercent: -50,
         yPercent: -50,
         x: "12vw",
-        y: "8vw",
-        scale: 0,
+        y: "10vw",
+        scale: 0.5,
         opacity: 0,
         position: "absolute",
         top: "50%",
@@ -63,6 +63,7 @@ const CoreCompetencies = () => {
           end: "bottom top",
           scrub: true,
           pin: true,
+          markers: true,
         },
       });
 
@@ -78,7 +79,7 @@ const CoreCompetencies = () => {
             opacity: 1,
             ease: "power2.out",
           },
-          "<+=0.01"
+          "<"
         )
         .to(
           circlesRef.current[2],
@@ -87,7 +88,7 @@ const CoreCompetencies = () => {
             opacity: 1,
             ease: "power2.out",
           },
-          "<+=0.01"
+          "<"
         )
         .to(circlesRef.current[0], {
           y: "0vw",
@@ -101,7 +102,7 @@ const CoreCompetencies = () => {
             x: "-30vw",
             ease: "power2.out",
           },
-          "<+=0.01"
+          "<"
         )
         .to(
           circlesRef.current[2],
@@ -110,8 +111,9 @@ const CoreCompetencies = () => {
             x: "30vw",
             ease: "power2.out",
           },
-          "<+=0.01"
+          "<"
         );
+
       // Background color animation
       gsap.fromTo(
         sectionRef.current,
@@ -121,7 +123,7 @@ const CoreCompetencies = () => {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top center",
-            toggleActions: "play none none none", // Play animation on enter only
+            toggleActions: "play none none none",
           },
         }
       );
@@ -132,37 +134,34 @@ const CoreCompetencies = () => {
 
   return (
     // let this section turn into black from gray while scrolling
-    <section
-      ref={sectionRef}
-      className="min-h-[200vh] text-white overflow-hidden py-24"
-    >
+    <section ref={sectionRef} className="text-white overflow-hidden py-24">
       <div className="flex gap-8 flex-col px-4">
-        <div className="w-full">
-          <h2 className="whitespace-nowrap uppercase text-base text-red">
-            About us
-          </h2>
-        </div>
+        <h2 className="whitespace-nowrap uppercase text-base text-red">
+          About us
+        </h2>
 
-        <div className="text-4xl md:text-6xl w-full">
+        <div className="text-2xl sm:text-4xl md:text-6xl w-full">
           <h3>
             PFO is differentiated by a sharp mix of three core competencies.
           </h3>
         </div>
       </div>
 
-      <div
-        ref={wrapperRef}
-        className="relative h-screen w-full flex items-center justify-center"
-      >
-        {competencies.map(({ label }, i) => (
-          <div
-            key={i}
-            ref={(el) => void (circlesRef.current[i] = el)}
-            className="flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] shadow-lg bg-white/50 text-white text-lg leading-tight md:text-2xl text-center p-4 overflow-hidden"
-          >
-            {label}
-          </div>
-        ))}
+      <div className="min-h-[200vh] overflow-hidden">
+        <div
+          ref={wrapperRef}
+          className="relative w-full h-screen flex items-center justify-center"
+        >
+          {competencies.map(({ label }, i) => (
+            <div
+              key={i}
+              ref={(el) => void (circlesRef.current[i] = el)}
+              className="flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] shadow-lg bg-white/50 text-white text-lg leading-tight md:text-2xl text-center p-4 overflow-hidden"
+            >
+              {label}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -56,7 +56,7 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 
       <div className="flex max-w-xl flex-col gap-3 col-span-2">
         <div>
-          <h3 className="text-4xl">{name}</h3>
+          <h3 className="text-2xl md:text-4xl">{name}</h3>
           <span className="text-base text-red">[ {position} ]</span>
         </div>
 

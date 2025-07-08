@@ -12,7 +12,7 @@ const Contact = () => {
             Contact
           </h2>
 
-          <p className="text-4xl max-w-xl indent-24">
+          <p className="md:text-4xl text-2xl max-w-xl indent-24">
             If you have questions or would like to learn more about our services
             and how Panzel Family Office can work with you, contact us
             confidentially here.
