@@ -86,6 +86,14 @@ const statsItems: StatsItemProps[] = [
   },
 ];
 
+const TextColorMap: Record<string, string> = {
+  green: "text-green-500",
+  blue: "text-blue-500",
+  violet: "text-violet-500",
+  orange: "text-orange-500",
+  yellow: "text-yellow-500",
+};
+
 const ColorShadeMap: Record<string, string[]> = {
   green: [
     "bg-green-200",
@@ -137,27 +145,28 @@ const RemainingStatsItems = ({ items, color }: RemainingStatsItemProps) => {
     (_, i) => fullShades[i % fullShades.length] ?? "bg-gray-100"
   );
   return (
-    <div className="w-full flex text-2xl md:text-4xl">
+    <div className="w-full flex">
       {items.map((item, i) => (
         <div
           key={i}
           className={cn(
-            "flex flex-col items-start justify-end md:p-4 px-2 py-4 grow w-full",
+            "flex flex-col items-start justify-end md:p-4 px-1 py-4 overflow-hidden grow w-full",
             // "not-last:border-r border-white",
             subItemShades[i]
           )}
           style={{ width: `${item.to}%` }}
         >
           <div>
-            {item.prefix && (
-              <span className="text-xs uppercase leading-none">
-                {item.prefix}
-              </span>
-            )}
+            {item.prefix && <p className="text-xs uppercase">{item.prefix}</p>}
 
             <div>
-              <CountUp from={+item.from} to={+item.to} />
-              {item.suffix && <span>{item.suffix}</span>}
+              <span className="text-2xl md:text-4xl">
+                <CountUp from={+item.from} to={+item.to} />
+              </span>
+
+              {item.suffix && (
+                <span className="text-xs uppercase">{item.suffix}</span>
+              )}
             </div>
           </div>
         </div>
@@ -173,10 +182,12 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
   const mainItem = subItems[0];
   const otherItems = subItems.slice(1);
 
+  const textColorClass = TextColorMap[color] ?? "text-black";
+
   return (
     <li className="grid md:grid-cols-3 w-full group">
-      <div className="flex flex-col md:p-4 p-2 md:min-h-52 gap-2 w-full">
-        <h2 className="text-2xl md:text-4xl">{title}</h2>
+      <div className="flex flex-col md:p-4 p-2 pb-8 md:pb-4 gap-2 w-full order-last md:order-none">
+        <h2 className={cn("text-2xl md:text-4xl", textColorClass)}>{title}</h2>
         <p>{subtitle}</p>
       </div>
 
@@ -187,12 +198,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
         )}
       >
         {mainItem && (
-          <div
-            className={cn(
-              "md:px-4 px-2 text-6xl md:text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow"
-              // "border-b border-white"
-            )}
-          >
+          <div className="md:px-4 px-2 text-6xl md:text-8xl pt-24 py-6 flex flex-col items-baseline gap-2 w-full grow">
             {mainItem.prefix && (
               <span className="text-base">{mainItem.prefix}</span>
             )}
