@@ -25,9 +25,22 @@ type RemainingStatsItemProps = {
 
 const statsItems: StatsItemProps[] = [
   {
+    title: "Pitch Decks Received",
+    subtitle: "The breakdown of pitch decks that we've received",
+    color: "indigo",
+    textColor: "white",
+    subItems: [
+      { from: 0, to: 222 },
+      { from: 0, to: 30, prefix: "All Women", suffix: "%" },
+      { from: 0, to: 51, prefix: "All Men", suffix: "%" },
+      { from: 0, to: 19, prefix: "Mixed", suffix: "%" },
+    ],
+  },
+
+  {
     title: "Fund Investments",
     subtitle: "This is a breakdown of funds by amount invested.",
-    color: "red",
+    color: "rose",
 
     subItems: [
       { from: 0, to: 23 },
@@ -41,25 +54,12 @@ const statsItems: StatsItemProps[] = [
     title: "All Venture",
     subtitle:
       "We've been tracking equity of our dealflow since February 2024, all other data is all-time, since venture inception. This is a breakdown of our investments across all venture by count.",
-    color: "fuchsia",
+    color: "violet",
     subItems: [
       { from: 0, to: 90 },
       { from: 0, to: 13, prefix: "All Women", suffix: "%" },
       { from: 0, to: 62, prefix: "All Men", suffix: "%" },
       { from: 0, to: 25, prefix: "Mixed", suffix: "%" },
-    ],
-  },
-
-  {
-    title: "Pitch Decks Received",
-    subtitle: "The breakdown of pitch decks that we've received",
-    color: "indigo",
-    textColor: "white",
-    subItems: [
-      { from: 0, to: 222 },
-      { from: 0, to: 30, prefix: "All Women", suffix: "%" },
-      { from: 0, to: 51, prefix: "All Men", suffix: "%" },
-      { from: 0, to: 19, prefix: "Mixed", suffix: "%" },
     ],
   },
 
@@ -79,7 +79,7 @@ const statsItems: StatsItemProps[] = [
   {
     title: "Startup Investments",
     subtitle: "This is a breakdown of our startups by amount invested.",
-    color: "amber",
+    color: "orange",
 
     subItems: [
       { from: 0, to: 67 },
@@ -93,9 +93,9 @@ const statsItems: StatsItemProps[] = [
 const TextColorMap: Record<string, string> = {
   emerald: "text-emerald-500",
   indigo: "text-indigo-500",
-  fuchsia: "text-fuchsia-500",
-  amber: "text-amber-500",
-  red: "text-red-600-500",
+  violet: "text-violet-500",
+  orange: "text-orange-500",
+  rose: "text-rose-500",
 };
 
 const ColorShadeMap: Record<string, string[]> = {
@@ -115,29 +115,29 @@ const ColorShadeMap: Record<string, string[]> = {
     "bg-indigo-600",
     "bg-indigo-700",
   ],
-  fuchsia: [
-    "bg-fuchsia-200",
-    "bg-fuchsia-300",
-    "bg-fuchsia-400",
-    "bg-fuchsia-500",
-    "bg-fuchsia-600",
-    "bg-fuchsia-700",
+  violet: [
+    "bg-violet-200",
+    "bg-violet-300",
+    "bg-violet-400",
+    "bg-violet-500",
+    "bg-violet-600",
+    "bg-violet-700",
   ],
-  amber: [
-    "bg-amber-200",
-    "bg-amber-300",
-    "bg-amber-400",
-    "bg-amber-500",
-    "bg-amber-600",
-    "bg-amber-700",
+  orange: [
+    "bg-orange-200",
+    "bg-orange-300",
+    "bg-orange-400",
+    "bg-orange-500",
+    "bg-orange-600",
+    "bg-orange-700",
   ],
-  red: [
-    "bg-red-200",
-    "bg-red-300",
-    "bg-red-400",
-    "bg-red-600",
-    "bg-red-600",
-    "bg-red-700",
+  rose: [
+    "bg-rose-200",
+    "bg-rose-300",
+    "bg-rose-400",
+    "bg-rose-500",
+    "bg-rose-600",
+    "bg-rose-700",
   ],
 };
 
