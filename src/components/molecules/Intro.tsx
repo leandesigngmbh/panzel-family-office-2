@@ -1,21 +1,13 @@
-import Text from "@/components/atoms/Text";
-
 const Intro = () => {
   return (
-    <section id="intro" className="py-24 md:px-4 px-2">
-      <div className="flex flex-col items-end">
-        <div>
-          <h2 className="whitespace-nowrap uppercase text-base text-red">
-            About
-          </h2>
+    <section className="py-24 md:px-4 px-2 text-4xl md:text-6xl flex flex-col gap-6">
+      <p className="max-w-7xl">
+        PFO stands at the intersection of smart capital, brand vision, and
+        cultural momentum.
+      </p>
 
-          <Text
-            text="Backed by three generations of family investors and over a century of
-        real family office experience, Panzel Family Office is your trusted
-        partner in asset management. We offer tailored expertise to protect your
-        wealth and ensure smooth, future-ready succession across generations."
-          />
-        </div>
+      <div className="aspect-video w-full bg-gray-200 flex items-center justify-center">
+        Video
       </div>
     </section>
   );
