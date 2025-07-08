@@ -8,7 +8,7 @@ const Contact = () => {
     >
       <div className="flex w-full lg:flex-row flex-col gap-8 max-w-7xl mx-auto ">
         <div className="flex flex-col w-full pr-8">
-          <h2 className="whitespace-nowrap uppercase text-base text-red">
+          <h2 className="whitespace-nowrap uppercase text-base text-red-600">
             Contact
           </h2>
 

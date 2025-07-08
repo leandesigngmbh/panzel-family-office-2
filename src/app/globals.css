@@ -6,10 +6,22 @@
 @theme inline {
 
   /* --color-*:initial; */
-  /* --color-red-*:initial; */
+  --color-red-*:initial;
   --color-white: #fff;
   --color-black: #000;
-  --color-red: #FF2700;
+  --color-red: oklch(63.935% 0.24709 31.291);
+  --color-red-50: oklch(94.164% 0.02947 30.635);
+  --color-red-100: oklch(90.446% 0.0498 30.372);
+  --color-red-200: oklch(83.119% 0.09417 30.472);
+  --color-red-300: oklch(76.598% 0.13966 31.687);
+  --color-red-400: oklch(70.893% 0.18465 32.024);
+  --color-red-500: oklch(66.638% 0.22209 32.532);
+  --color-red-600: oklch(63.935% 0.24709 31.291);
+  --color-red-700: oklch(53.157% 0.204 31.542);
+  --color-red-800: oklch(41.877% 0.1578 32.21);
+  --color-red-900: oklch(29.745% 0.10814 33.57);
+  --color-red-950: oklch(23.314% 0.08038 35.719);
+  /* --color-red: #FF2700; */
 
 
   --color-background: var(--background);

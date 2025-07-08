@@ -57,7 +57,7 @@ const TeamItem: React.FC<TeamMemberProps> = ({
       <div className="flex max-w-xl flex-col gap-3 col-span-2">
         <div>
           <h3 className="text-2xl md:text-4xl">{name}</h3>
-          <span className="text-base text-red">[ {position} ]</span>
+          <span className="text-base text-red-600">[ {position} ]</span>
         </div>
 
         <p className="indent-12">{about}</p>
@@ -70,7 +70,9 @@ const Team = () => {
   return (
     <section id="team" className="flex py-24 md:px-4 px-2 w-full">
       <div className="w-full flex flex-col gap-12">
-        <h2 className="whitespace-nowrap uppercase text-base text-red">Team</h2>
+        <h2 className="whitespace-nowrap uppercase text-base text-red-600">
+          Team
+        </h2>
 
         <ul className="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-9 md:gap-24">
           {teamMembers.map((props, i) => {

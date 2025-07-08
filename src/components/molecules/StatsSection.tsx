@@ -25,57 +25,9 @@ type RemainingStatsItemProps = {
 
 const statsItems: StatsItemProps[] = [
   {
-    title: "Pitch Decks Received",
-    subtitle: "The breakdown of pitch decks that we've received",
-    color: "blue",
-    textColor: "white",
-    subItems: [
-      { from: 0, to: 222 },
-      { from: 0, to: 30, prefix: "All Women", suffix: "%" },
-      { from: 0, to: 51, prefix: "All Men", suffix: "%" },
-      { from: 0, to: 19, prefix: "Mixed", suffix: "%" },
-    ],
-  },
-  {
-    title: "Meetings Held",
-    subtitle:
-      "Of pitch decks reviewed, this is a breakdown of those that progressed to meetings with us",
-    color: "green",
-    subItems: [
-      { from: 0, to: 87 },
-      { from: 0, to: 32, prefix: "All Women", suffix: "%" },
-      { from: 0, to: 52, prefix: "All Men", suffix: "%" },
-      { from: 0, to: 16, prefix: "Mixed", suffix: "%" },
-    ],
-  },
-  {
-    title: "All Venture",
-    subtitle:
-      "We've been tracking equity of our dealflow since February 2024, all other data is all-time, since venture inception. This is a breakdown of our investments across all venture by count.",
-    color: "violet",
-    subItems: [
-      { from: 0, to: 90 },
-      { from: 0, to: 13, prefix: "All Women", suffix: "%" },
-      { from: 0, to: 62, prefix: "All Men", suffix: "%" },
-      { from: 0, to: 25, prefix: "Mixed", suffix: "%" },
-    ],
-  },
-  {
-    title: "Startup Investments",
-    subtitle: "This is a breakdown of our startups by amount invested.",
-    color: "orange",
-
-    subItems: [
-      { from: 0, to: 67 },
-      { from: 0, to: 15, prefix: "All Women", suffix: "%" },
-      { from: 0, to: 70, prefix: "All Men", suffix: "%" },
-      { from: 0, to: 15, prefix: "Mixed", suffix: "%" },
-    ],
-  },
-  {
     title: "Fund Investments",
     subtitle: "This is a breakdown of funds by amount invested.",
-    color: "yellow",
+    color: "red",
 
     subItems: [
       { from: 0, to: 23 },
@@ -84,56 +36,108 @@ const statsItems: StatsItemProps[] = [
       { from: 0, to: 48, prefix: "Mixed", suffix: "%" },
     ],
   },
+
+  {
+    title: "All Venture",
+    subtitle:
+      "We've been tracking equity of our dealflow since February 2024, all other data is all-time, since venture inception. This is a breakdown of our investments across all venture by count.",
+    color: "fuchsia",
+    subItems: [
+      { from: 0, to: 90 },
+      { from: 0, to: 13, prefix: "All Women", suffix: "%" },
+      { from: 0, to: 62, prefix: "All Men", suffix: "%" },
+      { from: 0, to: 25, prefix: "Mixed", suffix: "%" },
+    ],
+  },
+
+  {
+    title: "Pitch Decks Received",
+    subtitle: "The breakdown of pitch decks that we've received",
+    color: "indigo",
+    textColor: "white",
+    subItems: [
+      { from: 0, to: 222 },
+      { from: 0, to: 30, prefix: "All Women", suffix: "%" },
+      { from: 0, to: 51, prefix: "All Men", suffix: "%" },
+      { from: 0, to: 19, prefix: "Mixed", suffix: "%" },
+    ],
+  },
+
+  {
+    title: "Meetings Held",
+    subtitle:
+      "Of pitch decks reviewed, this is a breakdown of those that progressed to meetings with us",
+    color: "emerald",
+    subItems: [
+      { from: 0, to: 87 },
+      { from: 0, to: 32, prefix: "All Women", suffix: "%" },
+      { from: 0, to: 52, prefix: "All Men", suffix: "%" },
+      { from: 0, to: 16, prefix: "Mixed", suffix: "%" },
+    ],
+  },
+
+  {
+    title: "Startup Investments",
+    subtitle: "This is a breakdown of our startups by amount invested.",
+    color: "amber",
+
+    subItems: [
+      { from: 0, to: 67 },
+      { from: 0, to: 15, prefix: "All Women", suffix: "%" },
+      { from: 0, to: 70, prefix: "All Men", suffix: "%" },
+      { from: 0, to: 15, prefix: "Mixed", suffix: "%" },
+    ],
+  },
 ];
 
 const TextColorMap: Record<string, string> = {
-  green: "text-green-500",
-  blue: "text-blue-500",
-  violet: "text-violet-500",
-  orange: "text-orange-500",
-  yellow: "text-yellow-500",
+  emerald: "text-emerald-500",
+  indigo: "text-indigo-500",
+  fuchsia: "text-fuchsia-500",
+  amber: "text-amber-500",
+  red: "text-red-600-500",
 };
 
 const ColorShadeMap: Record<string, string[]> = {
-  green: [
-    "bg-green-200",
-    "bg-green-300",
-    "bg-green-400",
-    "bg-green-500",
-    "bg-green-600",
-    "bg-green-700",
+  emerald: [
+    "bg-emerald-200",
+    "bg-emerald-300",
+    "bg-emerald-400",
+    "bg-emerald-500",
+    "bg-emerald-600",
+    "bg-emerald-700",
   ],
-  blue: [
-    "bg-blue-200",
-    "bg-blue-300",
-    "bg-blue-400",
-    "bg-blue-500",
-    "bg-blue-600",
-    "bg-blue-700",
+  indigo: [
+    "bg-indigo-200",
+    "bg-indigo-300",
+    "bg-indigo-400",
+    "bg-indigo-500",
+    "bg-indigo-600",
+    "bg-indigo-700",
   ],
-  violet: [
-    "bg-violet-200",
-    "bg-violet-300",
-    "bg-violet-400",
-    "bg-violet-500",
-    "bg-violet-600",
-    "bg-violet-700",
+  fuchsia: [
+    "bg-fuchsia-200",
+    "bg-fuchsia-300",
+    "bg-fuchsia-400",
+    "bg-fuchsia-500",
+    "bg-fuchsia-600",
+    "bg-fuchsia-700",
   ],
-  orange: [
-    "bg-orange-200",
-    "bg-orange-300",
-    "bg-orange-400",
-    "bg-orange-500",
-    "bg-orange-600",
-    "bg-orange-700",
+  amber: [
+    "bg-amber-200",
+    "bg-amber-300",
+    "bg-amber-400",
+    "bg-amber-500",
+    "bg-amber-600",
+    "bg-amber-700",
   ],
-  yellow: [
-    "bg-yellow-100",
-    "bg-yellow-200",
-    "bg-yellow-300",
-    "bg-yellow-400",
-    "bg-yellow-500",
-    "bg-yellow-600",
+  red: [
+    "bg-red-200",
+    "bg-red-300",
+    "bg-red-400",
+    "bg-red-600",
+    "bg-red-600",
+    "bg-red-700",
   ],
 };
 
@@ -187,6 +191,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
     <li className="grid md:grid-cols-3 w-full group">
       <div className="flex flex-col md:p-4 p-2 pb-8 md:pb-4 gap-2 w-full order-last md:order-none">
         <h2 className={cn("text-2xl md:text-4xl", textColorClass)}>{title}</h2>
+
         <p>{subtitle}</p>
       </div>
 
@@ -220,7 +225,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
 const StatsSection = () => {
   return (
     <section id="kpis" className="w-full flex flex-col pt-24">
-      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-red">
+      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-red-600">
         Key Performance Indicators
       </h2>
 
