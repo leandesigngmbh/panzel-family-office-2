@@ -134,7 +134,7 @@ const CoreCompetencies = () => {
 
   return (
     // let this section turn into black from gray while scrolling
-    <section ref={sectionRef} className="text-white overflow-hidden py-24">
+    <section ref={sectionRef} className="text-white overflow-hidden pt-24">
       <div className="flex gap-8 flex-col px-4">
         <h2 className="whitespace-nowrap uppercase text-base text-red">
           About us

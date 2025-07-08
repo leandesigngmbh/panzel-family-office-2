@@ -1,7 +1,10 @@
-type Values = { title: string; p: string };
+type Values = {
+  title: string;
+  p?: string;
+};
 
 const MissionVisionValues = () => {
-  const values = [
+  const values: Values[] = [
     {
       title: "Kindness, Respect & Integrity",
       p: "Treat others the way we want to be treated, internally and externally.",
@@ -16,8 +19,8 @@ const MissionVisionValues = () => {
   ];
 
   return (
-    <section className="py-24 md:px-4 px-2 bg-black text-white -mt-2">
-      <div className="grid grid-cols-2 max-w-7xl mx-auto border border-neutral-500 rounded-2xl">
+    <section className="pb-24 md:px-4 px-2 bg-black text-white -mt-2">
+      <div className="grid grid-cols-2 max-w-7xl mx-auto">
         <div className="px-2 py-8 sm:p-12 lg:p-24 flex flex-col gap-2 border-e border-neutral-500">
           <h2 className="text-4xl">Mission</h2>
           <p>
