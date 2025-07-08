@@ -63,7 +63,7 @@ const CoreCompetencies = () => {
           end: "bottom top",
           scrub: true,
           pin: true,
-          markers: true,
+          // markers: true,
         },
       });
 
