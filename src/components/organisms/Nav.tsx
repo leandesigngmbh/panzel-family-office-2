@@ -90,7 +90,7 @@ const Nav = () => {
           className={cn(
             "flex gap-2",
             showNav ? "translate-y-0" : "-translate-y-8",
-            "transition-transform"
+            "transition-transform duration-300"
           )}
           href="/"
         >
