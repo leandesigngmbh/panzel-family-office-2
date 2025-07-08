@@ -134,9 +134,9 @@ const CoreCompetencies = () => {
     // let this section turn into black from gray while scrolling
     <section
       ref={sectionRef}
-      className="min-h-[200vh] text-white overflow-hidden py-24 px-4"
+      className="min-h-[200vh] text-white overflow-hidden py-24"
     >
-      <div className="flex gap-8 flex-col">
+      <div className="flex gap-8 flex-col px-4">
         <div className="w-full">
           <h2 className="whitespace-nowrap uppercase text-base text-red">
             About us
@@ -158,7 +158,7 @@ const CoreCompetencies = () => {
           <div
             key={i}
             ref={(el) => void (circlesRef.current[i] = el)}
-            className="flex items-center justify-center rounded-full h-[25vw] w-[25vw] shadow-lg bg-white/50 text-white text-2xl text-center p-4"
+            className="flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] shadow-lg bg-white/50 text-white text-lg leading-tight md:text-2xl text-center p-4 overflow-hidden"
           >
             {label}
           </div>

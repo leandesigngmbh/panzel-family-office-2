@@ -83,7 +83,9 @@ const Nav = () => {
       {/* Left Part End */}
 
       {/* Mid Part Start */}
-      <div className={cn("flex justify-center overflow-hidden relative py-1")}>
+      <div
+        className={cn("flex justify-center overflow-y-hidden relative py-1")}
+      >
         <Link
           className={cn(
             showNav ? "translate-y-0" : "-translate-y-8",

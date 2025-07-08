@@ -6,7 +6,7 @@ const Contact = () => {
       id="contact"
       className="w-full flex bg-neutral-100 md:px-4 px-2 py-24 flex-col gap-8"
     >
-      <div className="flex w-full max-w-7xl mx-auto">
+      <div className="flex w-full lg:flex-row flex-col gap-8 max-w-7xl mx-auto ">
         <div className="flex flex-col w-full pr-8">
           <h2 className="whitespace-nowrap uppercase text-base text-red">
             Contact
