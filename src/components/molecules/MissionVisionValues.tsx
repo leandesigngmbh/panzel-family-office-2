@@ -19,7 +19,7 @@ const MissionVisionValues = () => {
   ];
 
   return (
-    <section className="pb-24 md:px-4 px-2 bg-black text-white -mt-2">
+    <section className="md:px-4 pb-12 px-2 bg-black text-white -mt-2">
       <div className="grid grid-cols-2 max-w-7xl mx-auto">
         <div className="px-2 py-8 sm:p-12 lg:p-24 flex flex-col gap-2 border-e border-neutral-500">
           <h2 className="text-4xl">Mission</h2>
