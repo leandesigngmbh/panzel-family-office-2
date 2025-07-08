@@ -10,7 +10,6 @@ import { useNavColor } from "@/lib/contexts/NavColorContext";
 
 const subNavItems = [
   { title: "About", href: "/#about" },
-  { title: "Manifest", href: "/#manifest" },
   { title: "KPI's", href: "/#kpis" },
   { title: "Team", href: "/#team" },
   { title: "Contact", href: "/#contact" },
@@ -65,15 +64,16 @@ const Nav = () => {
   return (
     <nav
       className={cn(
-        "fixed z-50 text-white top-0 inset-x-0 px-2 md:px-4 py-3 grid grid-cols-[100px_1fr_100px] w-full uppercase items-center transition",
+        "fixed z-50 text-white top-0 inset-x-0 px-2 md:px-4 py-3 grid md:grid-cols-[100px_1fr_100px] w-full uppercase items-center transition",
         isLightNav ? "text-white" : "text-red"
       )}
     >
       {/* Left Part Start */}
       <div
         className={cn(
-          scrolled ? "opacity-0" : "opacity-100",
-          "flex justify-start transition-transform"
+          "hidden md:flex",
+          "justify-start transition-transform",
+          scrolled ? "opacity-0" : "opacity-100"
         )}
       >
         <Link href="/">
@@ -88,11 +88,15 @@ const Nav = () => {
       >
         <Link
           className={cn(
+            "flex gap-2",
             showNav ? "translate-y-0" : "-translate-y-8",
             "transition-transform"
           )}
           href="/"
         >
+          <div className="md:hidden">
+            <Logo />
+          </div>
           Panzel Family Office
         </Link>
 
@@ -103,7 +107,7 @@ const Nav = () => {
             showNav ? "translate-y-8" : "-translate-y-0"
           )}
         >
-          <div className="subnav-link opacity-0">
+          <div className={cn("subnav-link opacity-0", "hidden md:block")}>
             <Link href="/">
               <Logo />
             </Link>
@@ -121,7 +125,8 @@ const Nav = () => {
       {/* Right Part Start */}
       <div
         className={cn(
-          "flex justify-end",
+          "hidden md:flex",
+          "justify-end",
           scrolled ? "opacity-0" : "opacity-100"
         )}
       >
