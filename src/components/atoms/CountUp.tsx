@@ -48,7 +48,11 @@ const CountUp = ({
     return () => ctx.revert();
   }, [from, to, duration, decimals]);
 
-  return <span ref={el} className={className}></span>;
+  return (
+    <span ref={el} className={className}>
+      {from}
+    </span>
+  );
 };
 
 export default CountUp;
