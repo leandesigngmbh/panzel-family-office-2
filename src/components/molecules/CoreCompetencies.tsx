@@ -137,7 +137,7 @@ const CoreCompetencies = () => {
     <section ref={sectionRef} className="text-white overflow-hidden pt-24">
       <div className="min-h-[200vh] overflow-hidden relative">
         <div className="flex gap-8 flex-col px-4 absolute top-0 max-w-7xl">
-          <h2 className="whitespace-nowrap uppercase text-base text-blue-200">
+          <h2 className="whitespace-nowrap uppercase text-base text-slate-400">
             About us
           </h2>
 
