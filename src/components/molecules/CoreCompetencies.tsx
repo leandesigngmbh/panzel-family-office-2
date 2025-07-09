@@ -137,7 +137,7 @@ const CoreCompetencies = () => {
     <section ref={sectionRef} className="text-white overflow-hidden pt-24">
       <div className="min-h-[200vh] overflow-hidden relative">
         <div className="flex gap-8 flex-col px-4 absolute top-0 max-w-7xl">
-          <h2 className="whitespace-nowrap uppercase text-base text-red-600">
+          <h2 className="whitespace-nowrap uppercase text-base text-blue-200">
             About us
           </h2>
 
@@ -157,7 +157,7 @@ const CoreCompetencies = () => {
               key={i}
               ref={(el) => void (circlesRef.current[i] = el)}
               className={cn(
-                "flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] shadow-lg bg-red mix-blend-multiply text-white text-lg leading-tight md:text-2xl text-center p-4 overflow-hidden"
+                "flex items-center justify-center rounded-full h-[33vw] w-[33vw] md:h-[25vw] md:w-[25vw] bg-slate-200 text-black mix-blend-multiply leading-tight md:text-2xl text-center p-4 overflow-hidden"
               )}
             >
               {label}

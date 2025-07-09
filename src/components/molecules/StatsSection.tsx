@@ -139,6 +139,14 @@ const ColorShadeMap: Record<string, string[]> = {
     "bg-rose-600",
     "bg-rose-700",
   ],
+  slate: [
+    "bg-slate-200",
+    "bg-slate-300",
+    "bg-slate-400",
+    "bg-slate-500",
+    "bg-slate-600",
+    "bg-slate-700",
+  ],
 };
 
 const getTailwindShades = (color: string) => ColorShadeMap[color] || [];
@@ -225,7 +233,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
 const StatsSection = () => {
   return (
     <section id="kpis" className="w-full flex flex-col pt-24">
-      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-red-600">
+      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-slate-400">
         Key Performance Indicators
       </h2>
 
