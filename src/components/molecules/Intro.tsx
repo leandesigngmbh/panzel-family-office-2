@@ -7,16 +7,6 @@ const Intro = () => {
         PFO stands at the intersection of smart capital, brand vision, and
         cultural momentum.
       </p>
-
-      <div className="aspect-video w-full bg-gray-200 flex items-center justify-center relative overflow-hidden">
-        <Image
-          // data-speed="0.75"
-          fill
-          src="/CZ25W12IX0010_rgb_comp_01.png"
-          alt="dasda"
-        />
-        Video
-      </div>
     </section>
   );
 };
