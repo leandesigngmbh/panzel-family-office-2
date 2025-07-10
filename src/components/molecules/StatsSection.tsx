@@ -175,7 +175,7 @@ const RemainingStatsItems = ({ items, color }: RemainingStatsItemProps) => {
           <div
             className={cn(
               subItemShades[i],
-              "w-full p-2 pt-3 md:p-4 md:pt-5 text-xs md:text-2xl xl:text-4xl leading-none"
+              "w-full p-2 pt-3 md:p-4 md:pt-5 text-xs md:text-2xl xl:text-4xl leading-none text-gray-100"
             )}
           >
             <CountUp from={+item.from} to={+item.to} />
