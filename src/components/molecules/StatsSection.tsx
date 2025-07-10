@@ -38,6 +38,19 @@ const statsItems: StatsItemProps[] = [
   },
 
   {
+    title: "All Venture",
+    subtitle:
+      "We've been tracking equity of our dealflow since February 2024, all other data is all-time, since venture inception. This is a breakdown of our investments across all venture by count.",
+    color: "slate",
+    subItems: [
+      { from: 0, to: 90 },
+      { from: 0, to: 13, prefix: "All Women", suffix: "%" },
+      { from: 0, to: 62, prefix: "All Men", suffix: "%" },
+      { from: 0, to: 25, prefix: "Mixed", suffix: "%" },
+    ],
+  },
+
+  {
     title: "Fund Investments",
     subtitle: "This is a breakdown of funds by amount invested.",
     color: "rose",
@@ -47,19 +60,6 @@ const statsItems: StatsItemProps[] = [
       { from: 0, to: 13, prefix: "All Women", suffix: "%" },
       { from: 0, to: 39, prefix: "All Men", suffix: "%" },
       { from: 0, to: 48, prefix: "Mixed", suffix: "%" },
-    ],
-  },
-
-  {
-    title: "All Venture",
-    subtitle:
-      "We've been tracking equity of our dealflow since February 2024, all other data is all-time, since venture inception. This is a breakdown of our investments across all venture by count.",
-    color: "violet",
-    subItems: [
-      { from: 0, to: 90 },
-      { from: 0, to: 13, prefix: "All Women", suffix: "%" },
-      { from: 0, to: 62, prefix: "All Men", suffix: "%" },
-      { from: 0, to: 25, prefix: "Mixed", suffix: "%" },
     ],
   },
 
@@ -96,6 +96,7 @@ const TextColorMap: Record<string, string> = {
   violet: "text-violet-500",
   orange: "text-orange-500",
   rose: "text-rose-500",
+  slate: "text-slate-500",
 };
 
 const ColorShadeMap: Record<string, string[]> = {

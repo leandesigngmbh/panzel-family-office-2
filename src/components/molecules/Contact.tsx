@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full flex bg-neutral-100 md:px-4 px-2 py-24 flex-col gap-8"
+      className="w-full flex bg-slate-100 md:px-4 px-2 py-24 flex-col gap-8"
     >
       <div className="flex w-full lg:flex-row flex-col gap-8 max-w-7xl mx-auto ">
         <div className="flex flex-col w-full pr-8">
@@ -24,7 +24,7 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              className="border-b border-neutral-300 focus:ring-0 placeholder-black focus:outline-none focus:border-black block w-full py-2.5"
+              className="border-b border-slate-400 focus:ring-0 placeholder-black focus:outline-none focus:border-black block w-full py-2.5"
               placeholder="Email"
               required
             />
@@ -34,7 +34,7 @@ const Contact = () => {
             <input
               type="text"
               id="subject"
-              className="block py-2.5 w-full border-b border-neutral-300 focus:ring-0 placeholder-black focus:outline-none focus:border-black"
+              className="block py-2.5 w-full border-b border-slate-400 focus:ring-0 placeholder-black focus:outline-none focus:border-black"
               placeholder="Subject"
               required
             />
@@ -43,7 +43,7 @@ const Contact = () => {
           <div className="sm:col-span-2">
             <textarea
               id="message"
-              className="block min-h-40 py-2.5 w-full border-b border-neutral-300 focus:ring-0 placeholder-black focus:outline-none focus:border-black"
+              className="block min-h-40 py-2.5 w-full border-b border-slate-400 focus:ring-0 placeholder-black focus:outline-none focus:border-black"
               placeholder="Message"
             ></textarea>
           </div>

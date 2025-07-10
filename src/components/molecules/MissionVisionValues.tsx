@@ -14,13 +14,32 @@ const MissionVisionValues = () => {
       p: "Seek to operate with the highest standards and deliver differentiated results.",
     },
     { title: "Team First", p: "Collaborative approach — together we can win." },
-    { title: "Kindness, Respect & Integrity" },
-    { title: "Kindness, Respect & Integrity" },
+    { title: "Humility", p: "Listen and learn from one another." },
+    {
+      title: "Investor Focused",
+      p: "Remember who our most important stakeholders are.",
+    },
+    {
+      title: "Inclusivity",
+      p: "Each team member plays an important role in getting to the best decisions.",
+    },
+    {
+      title: "Transparency",
+      p: "Communicate openly and provide honest feedback.",
+    },
+    {
+      title: "Creative",
+      p: "Think outside the box; strive to not be constrained by industry norms.",
+    },
+    {
+      title: "Talent Development",
+      p: "Enduring commitment to helping our team members achieve their full potential.",
+    },
   ];
 
   return (
-    <section className="md:px-4 pb-12 px-2 bg-black text-white -mt-2">
-      <div className="grid grid-cols-2 max-w-7xl mx-auto border border-slate-400 rounded-xl">
+    <section className="md:px-4 pb-12 px-2 bg-black -mt-2 text-white">
+      <div className="grid grid-cols-2 max-w-7xl mx-auto border border-slate-400 rounded-xl bg-neutral-900">
         <div className="pe-4 py-8 sm:p-12 lg:p-24 flex flex-col gap-2 border-e border-slate-400">
           <h2 className="text-4xl">Mission</h2>
           <p>

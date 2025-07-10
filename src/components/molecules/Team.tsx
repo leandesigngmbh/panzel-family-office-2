@@ -22,13 +22,13 @@ const teamMembers = [
     about:
       "Nadine is CIO (Chief Investment Officer) of Panzel Family Office pro-bono and Board Member since 2008. During the pandemic crises (2019-2021) she doubled AUM of PFO. She is Senior Manager in Corporate Finance in Stuttgart. Prior she worked 25 years with Mercedes Benz Group with the transformation of Daimler AG’s Spin-Off of the Daimler Truck unit. Nadine graduated with a Diploma of the Baden-Württemberg Cooperative State University (DHBW) in Stuttgart. She is engaged within a professional chorus in Gotha and supports young women from East Germany and Ukraine to become leaders in family owned businesses.",
   },
-  {
-    name: "Dr. Annette Ryčl",
-    position: "Headhunting",
-    // img: "/assets/team/Nadine-portrait-min.jpg",
-    about:
-      "Annette is Chairwoman of Board of Panzel Family Office since 1990. She has been working more than 30 years as a retained Headhunter in Geneva and Zurich for legal Board Advisory and Placements and Recruitments for top tier leadership positions but for women only. She worked in Germany, Norway, Sweden and Switzerland mainly for IR Automotive, Telco and later Private Investment Banking and Wealth Mgt, recruiting investment talent for midsize ($10-500m) Single Family Offices. She studied at University Paris Sorbonne 1 (Panthéon) Philosophy, Political and Social Science and Human Resources. She still advised family dynasties in Canada, Germany, Norway, Sweden and Switzerland and holds lecturers and speeches at WEF, London School of Economics and INSEAD.",
-  },
+  // {
+  //   name: "Dr. Annette Ryčl",
+  //   position: "Headhunting",
+  //   // img: "/assets/team/Nadine-portrait-min.jpg",
+  //   about:
+  //     "Annette is Chairwoman of Board of Panzel Family Office since 1990. She has been working more than 30 years as a retained Headhunter in Geneva and Zurich for legal Board Advisory and Placements and Recruitments for top tier leadership positions but for women only. She worked in Germany, Norway, Sweden and Switzerland mainly for IR Automotive, Telco and later Private Investment Banking and Wealth Mgt, recruiting investment talent for midsize ($10-500m) Single Family Offices. She studied at University Paris Sorbonne 1 (Panthéon) Philosophy, Political and Social Science and Human Resources. She still advised family dynasties in Canada, Germany, Norway, Sweden and Switzerland and holds lecturers and speeches at WEF, London School of Economics and INSEAD.",
+  // },
 ];
 
 const TeamItem: React.FC<TeamMemberProps> = ({
@@ -38,7 +38,7 @@ const TeamItem: React.FC<TeamMemberProps> = ({
   about,
 }) => {
   return (
-    <li className="flex flex-col gap-6 w-full items-start">
+    <li className="flex flex-col gap-6 w-full items-start max-w-lg">
       <div className="aspect-[4/5] w-52 shrink-0 overflow-clip relative">
         {img ? (
           <Image
@@ -68,13 +68,16 @@ const TeamItem: React.FC<TeamMemberProps> = ({
 
 const Team = () => {
   return (
-    <section id="team" className="flex py-24 md:px-4 px-2 w-full">
-      <div className="w-full flex flex-col gap-12">
+    <section
+      id="team"
+      className="flex py-24 md:px-4 px-2 w-full justify-center"
+    >
+      <div className="w-full flex flex-col gap-12 max-w-7xl">
         <h2 className="whitespace-nowrap uppercase text-base text-slate-400">
           Team
         </h2>
 
-        <ul className="w-full grid lg:grid-cols-2 xl:grid-cols-3 gap-9 md:gap-24">
+        <ul className="w-full grid lg:grid-cols-2 xl:grid-cols-2 gap-8 md:gap-16">
           {teamMembers.map((props, i) => {
             return <TeamItem key={i} {...props} />;
           })}
