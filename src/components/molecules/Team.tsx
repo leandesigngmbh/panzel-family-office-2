@@ -57,7 +57,7 @@ const TeamItem: React.FC<TeamMemberProps> = ({
       <div className="flex max-w-xl flex-col gap-3 col-span-2">
         <div>
           <h3 className="text-2xl md:text-4xl">{name}</h3>
-          <span className="text-base text-slate-400">[ {position} ]</span>
+          <span className="text-base text-gray-400">[ {position} ]</span>
         </div>
 
         <p className="indent-12">{about}</p>
@@ -73,7 +73,7 @@ const Team = () => {
       className="flex py-24 md:px-4 px-2 w-full justify-center"
     >
       <div className="w-full flex flex-col gap-12 max-w-7xl">
-        <h2 className="whitespace-nowrap uppercase text-base text-slate-400">
+        <h2 className="whitespace-nowrap uppercase text-base text-gray-400">
           Team
         </h2>
 

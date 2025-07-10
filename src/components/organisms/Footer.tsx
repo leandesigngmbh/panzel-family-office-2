@@ -9,7 +9,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-slate-700 text-white text-xs md:p-4 p-2 min-h-64 flex flex-col justify-between">
+    <footer className="w-full bg-gray-700 text-white text-xs md:p-4 p-2 min-h-64 flex flex-col justify-between">
       <div className="flex justify-between">
         <Logo />
 
@@ -30,7 +30,7 @@ const Footer = () => {
           Family Owned Office in Switzerland. All rights reserved.
         </p>
 
-        <p className="text-slate-400">
+        <p className="text-gray-400">
           Panzel Family Office, Rue de Lausanne 43b, 1110 Morges, Switzerland.
           Phone +41798444988. Email hej@panzel.ch
         </p>

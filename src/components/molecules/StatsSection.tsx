@@ -41,7 +41,7 @@ const statsItems: StatsItemProps[] = [
     title: "All Venture",
     subtitle:
       "We've been tracking equity of our dealflow since February 2024, all other data is all-time, since venture inception. This is a breakdown of our investments across all venture by count.",
-    color: "slate",
+    color: "gray",
     subItems: [
       { from: 0, to: 90 },
       { from: 0, to: 13, prefix: "All Women", suffix: "%" },
@@ -96,7 +96,7 @@ const TextColorMap: Record<string, string> = {
   violet: "text-violet-500",
   orange: "text-orange-500",
   rose: "text-rose-500",
-  slate: "text-slate-500",
+  gray: "text-gray-500",
 };
 
 const ColorShadeMap: Record<string, string[]> = {
@@ -140,13 +140,13 @@ const ColorShadeMap: Record<string, string[]> = {
     "bg-rose-600",
     "bg-rose-700",
   ],
-  slate: [
-    "bg-slate-200",
-    "bg-slate-300",
-    "bg-slate-400",
-    "bg-slate-500",
-    "bg-slate-600",
-    "bg-slate-700",
+  gray: [
+    "bg-gray-600",
+    "bg-gray-500",
+    "bg-gray-400",
+    "bg-gray-300",
+    "bg-gray-200",
+    "bg-gray-100",
   ],
 };
 
@@ -188,13 +188,13 @@ const RemainingStatsItems = ({ items, color }: RemainingStatsItemProps) => {
 };
 
 const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
-  const fullShades = getTailwindShades(color);
+  const fullShades = getTailwindShades("gray");
   const wrapperShade = fullShades[3] ?? "bg-gray-300";
 
   const mainItem = subItems[0];
   const otherItems = subItems.slice(1);
 
-  const textColorClass = TextColorMap[color] ?? "text-black";
+  const textColorClass = TextColorMap["gray"] ?? "text-black";
 
   return (
     <li className="grid md:grid-cols-3 w-full group">
@@ -224,7 +224,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
         )}
 
         {otherItems.length > 0 && (
-          <RemainingStatsItems items={otherItems} color={color} />
+          <RemainingStatsItems items={otherItems} color={"gray"} />
         )}
       </div>
     </li>
@@ -234,7 +234,7 @@ const StatsItem = ({ title, subtitle, subItems, color }: StatsItemProps) => {
 const StatsSection = () => {
   return (
     <section id="kpis" className="w-full flex flex-col pt-24">
-      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-slate-400">
+      <h2 className="whitespace-nowrap md:p-4 p-2 uppercase text-base text-gray-400">
         Key Performance Indicators
       </h2>
 

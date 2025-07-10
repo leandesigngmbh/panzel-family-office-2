@@ -39,8 +39,8 @@ const MissionVisionValues = () => {
 
   return (
     <section className="md:px-4 pb-12 px-2 bg-black -mt-2 text-white">
-      <div className="grid grid-cols-2 max-w-7xl mx-auto border border-slate-400 rounded-xl bg-neutral-900">
-        <div className="pe-4 py-8 sm:p-12 lg:p-24 flex flex-col gap-2 border-e border-slate-400">
+      <div className="grid grid-cols-2 max-w-7xl mx-auto border border-gray-400 rounded-xl bg-neutral-900">
+        <div className="pe-4 py-8 sm:p-12 lg:p-24 flex flex-col gap-2 border-e border-gray-400">
           <h2 className="text-4xl">Mission</h2>
           <p>
             Our mission is to deliver differentiated results to our investors by
@@ -59,7 +59,7 @@ const MissionVisionValues = () => {
           </p>
         </div>
 
-        <div className="col-span-full py-8 sm:p-12 lg:p-24 flex flex-col gap-8 border-t border-slate-400">
+        <div className="col-span-full py-8 sm:p-12 lg:p-24 flex flex-col gap-8 border-t border-gray-400">
           <h2 className="text-4xl">Values</h2>
           <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8 md:gap-12">
             {values.map(({ title, p }, i) => {
