@@ -144,6 +144,8 @@ const CoreCompetencies = () => {
           <div className="text-2xl sm:text-4xl md:text-6xl w-full">
             <h3>
               PFO is differentiated by a sharp mix of three core competencies.
+              We stand at the intersection of smart capital, brand vision, and
+              cultural momentum.
             </h3>
           </div>
         </div>

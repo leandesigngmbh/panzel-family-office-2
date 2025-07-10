@@ -2,10 +2,6 @@ import NavColorSwitcher from "@/components/atoms/NavColorSwitcher";
 import Contact from "@/components/molecules/Contact";
 import CoreCompetencies from "@/components/molecules/CoreCompetencies";
 import Hero from "@/components/molecules/Hero";
-import Intro from "@/components/molecules/Intro";
-import MissionVisionValues from "@/components/molecules/MissionVisionValues";
-import StatsSection from "@/components/molecules/StatsSection";
-import Team from "@/components/molecules/Team";
 import Footer from "@/components/organisms/Footer";
 
 const Home = () => {
@@ -16,17 +12,9 @@ const Home = () => {
       </NavColorSwitcher>
 
       <main className="bg-white relative">
-        <Intro />
-
         <NavColorSwitcher id="test" light={true}>
           <CoreCompetencies />
-
-          <MissionVisionValues />
         </NavColorSwitcher>
-
-        <StatsSection />
-
-        <Team />
 
         <Contact />
       </main>

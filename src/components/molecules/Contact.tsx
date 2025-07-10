@@ -8,14 +8,14 @@ const Contact = () => {
       className="w-full flex bg-gray-100 md:px-4 px-2 py-24 flex-col gap-8"
     >
       <div className="flex flex-col gap-8 max-w-7xl mx-auto w-full">
-        <div className="aspect-video w-full flex items-center justify-center relative overflow-hidden">
+        {/* <div className="aspect-video w-full flex items-center justify-center relative overflow-hidden">
           <Image
             // data-speed="0.75"
             fill
             src="/CZ25W12IX0010_rgb_comp_01_transp.png"
             alt="dasda"
           />
-        </div>
+        </div> */}
 
         <div className="flex lg:flex-row flex-col gap-8 w-full">
           <div className="flex flex-col w-full pr-8">
